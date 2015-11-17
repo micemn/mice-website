@@ -10,7 +10,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600' rel='stylesheet' type='text/css'>
 
-    <title>Midwest Internet Cooperative Exchange</title>
+    <title>Technical - Midwest Internet Cooperative Exchange</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -41,7 +41,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="mice">
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -71,34 +71,58 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container tc">
+    <h1>Technical</h1>
+<div class="cpw">
+<h2>Member Port Summary</h2>
+<ul>
+<li>Spanning tree shall be disabled (no BPDUs)</li>
+<li>An MTU of up to 9198 is supported</li>
+<li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M</li>
+<li>A maximum of 5 incoming MAC addresses; in practice, you should use only one</li>
+<li>For recommendations on how to configure your equipment, see the excellent <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</li>
+</ul>
+</div>
+</div>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>The Midwest Internet Cooperative Exchange is a Local Exchange Point located in Minneapolis, MN</h1>
-        <p>If you represent a network interested in connecting, please <a href="contact.html">contact us</a> for details. </p><p><a class="btn btn-lg btn-primary" href="contact.html" role="button">Contact Us</a>   <a class="btn btn-lg btn-primary" href="http://micemn.net/files/MICEoverview.pdf" role="button">Download a presentation</a></p>
-      </div>
+<div class="container">
+<div class="cpw">
+<h2>MICE Juniper Switch Configuration</h2>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<pre>
+set interface X/X/X mtu 9216
+set protocols rstp interface X/X/X edge
+set ethernet-switching-options bpdu-block interface X/X/X
+set ethernet-switching-options secure-access-port interface X/X/X mac-limit 5
+set ethernet-switching-options storm-control interface X/X/X bandwidth 100000
+set ethernet-switching-options bpdu-block disable-timeout 60
+set ethernet-switching-options storm-control interface all
+</pre>
+</div>
+</div>
 
-    </div> <!-- /container -->
-	<div class="container">
-	<div class="row">
-	<div class="col-md-6">
-	<div class="network">
-	<a href="http://micelg.usinternet.com/export/graph_385.html"><img src="http://micelg.usinternet.com/export/graphs/graph_385_3.png" class="graph" alt="MICE Traffic"></a>
-	</div>
-	</div>
-	<div class="col-md-6">
-	<div class="newsbox">
-	<h1>Upcoming Events</h1>
-	<div class="eventbox">
-	<h2>MICE User Group 18</h2>
-	<p>November 16, 1:00pm, 511 Building Cafeteria<br>(11th Ave S, Minneapolis, MN)<br>Tentative: UG 19 on January 20; UG 20 on March 23</p>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	
+<div class="container">
+<div class="cpw mb">
+<h2>MICE Cisco Switch Configuration</h2>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<pre>
+system mtu jumbo 9198
+mac address-table aging-time 14400
+errdisable detect cause link-flap
+errdisable recovery cause link-flap
+errdisable recovery cause storm-control
+vtp mode transparent
+switchport block multicast
+switchport block unicast
+switchport port-security maximum 5
+switchport port-security
+switchport port-security violation restrict
+storm-control broadcast level 20.00
+spanning-tree bpdufilter enable
+no cdp enable
+</pre>
+</div>
+</div>
 
 <div class="footer">
 <div class="container">

@@ -1,8 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <title>Midwest Internet Cooperative Exchange</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600' rel='stylesheet' type='text/css'>
+
+    <title>Participants - Midwest Internet Cooperative Exchange</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-5540979-2']);
@@ -14,30 +39,45 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    <style type="text/css">
-      div.logo
-      {
-        text-align: center;
-      }
-      td.as
-      {
-        text-align: right;
-      }
-      .unused
-      {
-        color: gray;
-      }
-    </style>
   </head>
-  <body>
-    <div class="logo">
-      <a href="/"><img src="images/MICElogoweb_800px.png" border="0" alt="Midwest Internet Cooperative Exchange"></a>
+
+  <body class="mice">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/"><img src="images/logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="participants.html">Participants</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="technical.html">Technical</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
 
-    <div>
-      <h2>MICE Core Switches</h2>
-      <p>This is the preferred connection location, copper 10/100/1000 ports and fiber 1/10G ports available.
-      <BR>Cologix discounted connections are available on this switch.</p>
+    <div class="container tc">
+    <h1>Participants</h1>
+<div class="cpw">
+<h2>MICE Core Switch</h2>
+<p>This is the preferred connection location, copper 10/100/1000 ports and fiber 1/10G ports available.
+Cologix discounted connections are available on this switch.</p>
+
       <table border="1">
         <thead>
           <tr>
@@ -61,38 +101,38 @@
             <td rowspan="4">&nbsp;</td>
           </tr>
           <tr>
-            <td>Ge-1/0/0</td>
+            <td>ge-1/0/0</td>
             <td><a href="telnet://rviews:@route-server.micemn.net:23">MICE Looking Glass</A></td>
             <td class="as">&nbsp;</td>
             <td>206.108.255.250</td>
             <td>2001:504:27:0:0:D1AF::f250</td>
           </tr>
           <tr>
-            <td>Ge-1/0/1</td>
+            <td>ge-1/0/1</td>
             <td>MICE Route Server #1</td>
             <td class="as"><a href="http://bgp.he.net/AS53679">53679</a></td>
             <td>206.108.255.1</td>
             <td>2001:504:27:0:0:D1AF::1</td>
           </tr>
           <tr>
-            <td>Ge-1/0/2</td>
+            <td>ge-1/0/2</td>
             <td>MICE Route Server #2</td>
             <td class="as"><a href="http://bgp.he.net/AS53679">53679</a></td>
             <td>206.108.255.2</td>
             <td>2001:504:27:0:0:D1AF::2</td>
           </tr>
           <tr>
-            <td>Ge-1/0/3</td>
-            <td>ipHouse</td>
+            <td>ge-1/0/3</td>
+            <td><a href="http://iphouse.net" target="_blank">ipHouse</a></td>
             <td class="as"><a href="http://bgp.he.net/AS7753">7753</a></td>
             <td>206.108.255.3</td>
             <td>2001:504:27:0:0:1E49::1</td>
             <td><a href="mailto:noc@iphouse.net">noc@iphouse.net</a></td>
             <td>Yes</td>
           </tr>
-          <tr>
-            <td>Ge-1/0/4</td>
-            <td>TDS</td>
+          <tr><!-- Moving to xe-0/0/6 on the main switch. -->
+            <td>ge-1/0/4</td>
+            <td><a href="http://tdstelecom.com" target="_blank">TDS</a></td>
             <td class="as"><a href="http://bgp.he.net/AS4181">4181</a></td>
             <td>206.108.255.4</td>
             <td>2001:504:27:0:0:1055::1</td>
@@ -100,8 +140,8 @@
             <td>No</td>
           </tr>
           <tr>
-            <td>Ge-1/0/5</td>
-            <td>Implex</td>
+            <td>ge-1/0/5</td>
+            <td><a href="http://implex.net" target="_blank">Implex</a></td>
             <td class="as"><a href="http://bgp.he.net/AS21709">21709</a></td>
             <td>206.108.255.5</td>
             <td class="unused">2001:504:27:0:0:54CD::1</td>
@@ -109,8 +149,8 @@
             <td>No</td>
           </tr>
           <tr>
-            <td>Ge-1/0/6</td>
-            <td>VISI</td>
+            <td>ge-1/0/6</td>
+            <td><a href="http://visi.com" target="_blank">VISI</a></td>
             <td class="as"><a href="http://bgp.he.net/AS8015">8015</a></td>
             <td>206.108.255.6</td>
             <td>2001:504:27:0:0:1F4F::1</td>
@@ -118,8 +158,8 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td rowspan="2">Ge-1/0/7</td>
-            <td rowspan="2">Supranet</td>
+            <td rowspan="2">ge-1/0/7</td>
+            <td rowspan="2"><a href="http://supranet.net" target="_blank">Supranet</a></td>
             <td class="as"><a href="http://bgp.he.net/AS4150">4150</a></td>
             <td>206.108.255.27</td>
             <td>2001:504:27:0:0:1036::1</td>
@@ -132,26 +172,26 @@
             <td>2001:504:27:0:0:1633::1</td>
           </tr>
           <tr>
-            <td>Ge-1/0/8</td>
-            <td>Nextera</td>
+            <td>ge-1/0/8</td>
+            <td><a href="http://nextera.net" target="_blank">Nextera</a></td>
             <td class="as"><a href="http://bgp.he.net/AS22402">22402</a></td>
             <td>206.108.255.8</td>
             <td class="unused">2001:504:27:0:0:5782::1</td>
             <td><a href="mailto:peering@nextera.net">peering@nextera.net</a></td>
             <td>Yes</td>
           </tr>
-          <tr class="unused"><!-- Inactive since before 2014-01-30. Expire on 2014-04-30. -->
-            <td>Ge-1/0/9</td>
-            <td>Minnesota WiFi</td>
-            <td class="as">TBD</td>
-            <td>206.108.255.9</td>
-            <td>2001:504:27:0:0:????::1</td>
-            <td><a href="mailto:darin.steffl@mnwifi.com">darin.steffl@mnwifi.com</a></td>
-            <td>Yes</td>
+          <tr class="unused">
+            <td>ge-1/0/9</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
           <tr>
-            <td>Ge-1/0/10</td>
-            <td>Airstream</td>
+            <td>ge-1/0/10</td>
+            <td><a href="http://wins.net" target="_blank">Airstream</a></td>
             <td class="as"><a href="http://bgp.he.net/AS11796">11796</a></td>
             <td>206.108.255.10</td>
             <td>2001:504:27:0:0:2E14::1</td>
@@ -159,8 +199,8 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Ge-1/0/11</td>
-            <td>Minnesota VoIP</td>
+            <td>ge-1/0/11</td>
+            <td><a href="http://mnvoip.com" target="_blank">Minnesota VoIP</a></td>
             <td class="as"><a href="http://bgp.he.net/AS32621">32621</a></td>
             <td>206.108.255.11</td>
             <td>2001:504:27:0:0:7F6D::1</td>
@@ -168,417 +208,8 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Ge-1/0/12</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/13</td>
-            <td>MDU Ethernet</td>
-            <td class="as"><a href="http://bgp.he.net/AS13573">13573</a></td>
-            <td>206.108.255.13</td>
-            <td class="unused">2001:504:27:0:0:3505::1</td>
-            <td><a href="mailto:support@mduethernet.com">support@mduethernet.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/14</td>
-            <td>Atomic Data</td>
-            <td class="as"><a href="http://bgp.he.net/AS25694">25694</a></td>
-            <td>206.108.255.14</td>
-            <td>2001:504:27:0:0:645E::1</td>
-            <td><a href="mailto:servicenotices@atomicdata.com">servicenotices@atomicdata.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/15</td>
-            <td>Advanced Integrated Tech</td>
-            <td class="as"><a href="http://bgp.he.net/AS13746">13746</a></td>
-            <td>206.108.255.25</td>
-            <td>2001:504:27:0:0:35B2::1</td>
-            <td><a href="mailto:peering@aitech.net">peering@aitech.net</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/16</td>
-            <td>CDW/Berbee</td>
-            <td class="as"><a href="http://bgp.he.net/AS3599">3599</a></td>
-            <td>206.108.255.26</td>
-            <td>2001:504:27:0:0:0E0F::1</td>
-            <td><a href="mailto:stahr@berbee.com">stahr@berbee.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/17</td>
-            <td>Savage Communications</td>
-            <td class="as"><a href="http://bgp.he.net/AS23260">23260</a></td>
-            <td>206.108.255.17</td>
-            <td class="unused">2001:504:27:0:0:5ADC::1</td>
-            <td><a href="mailto:mike@scicable.net">mike@scicable.net</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/18</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/19</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/20</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/21</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/22</td>
-            <td>Route Server #1 Mgmt</td>
-            <td colspan="5">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Ge-1/0/23</td>
-            <td>Route Server #2 Mgmt</td>
-            <td colspan="5">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/0</td>
-            <td>Dakota Carrier Network</td>
-            <td class="as"><a href="http://bgp.he.net/AS26794">26794</a></td>
-            <td>206.108.255.60<br>206.108.255.61</td>
-            <td class="unused">2001:504:27:0:0:68AA::1<br>2001:504:27:0:0:68AA::2</td>
-            <td><a href="mailto:dcnadmin@dakotacarrier.com">dcnadmin@dakotacarrier.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/1</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/2</td>
-            <td>Integra Telecom</td>
-            <td class="as"><a href="http://bgp.he.net/AS7385">7385</a></td>
-            <td>206.108.255.62</td>
-            <td>2001:504:27:0:0:1CD9::1</td>
-            <td><a href="mailto:peering@integra.net">peering@integra.net</a></td>
-            <td>No</td>
-          </tr>
-          <tr class="unused"><!-- Inactive since before 2014-01-30. Expire on 2014-04-30. -->
-            <td>Ge-0/0/3</td>
-            <td>Zayo Enterprise Networks</td>
-            <td class="as"><a href="http://bgp.he.net/AS5006">5006</a></td>
-            <td>206.108.255.63</td>
-            <td>2001:504:27:0:0:138E::1</td>
-            <td>TBD</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/4</td>
-            <td>South Dakota Networks</td>
-            <td class="as"><a href="http://bgp.he.net/AS13576">13576</a></td>
-            <td>206.108.255.49</td>
-            <td class="unused">2001:504:27:0:0:3508::1</td>
-            <td><a href="mailto:peering@sdncommunications.com">peering@sdncommunications.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/5</td>
-            <td>Onvoy Voice Services</td>
-            <td class="as"><a href="http://bgp.he.net/AS5715">5715</a></td>
-            <td>206.108.255.48</td>
-            <td class="unused">2001:504:27:0:0:1653::1</td>
-            <td><a href="mailto:craig.olson@onvoy.com">craig.olson@onvoy.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-0/0/6</td>
-            <td>ClaimLynx</td>
-            <td class="as"><a href="http://bgp.he.net/AS62708">62708</a></td>
-            <td>206.108.255.16</td>
-            <td>2001:504:27:0:0:F4F4::1</td>
-            <td><a href="mailto:root@claimlynx.com">root@claimlynx.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/7</td>
-            <td>Arvig</td>
-            <td class="as"><a href="http://bgp.he.net/AS16904">16904</a></td>
-            <td>206.108.255.7</td>
-            <td>2001:504:27:0:0:4208::1</td>
-            <td><a href="mailto:peering@arvig.com">peering@arvig.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/8</td>
-            <td>Charter</td>
-            <td class="as"><a href="http://bgp.he.net/AS20115">20115</a></td>
-            <td>206.108.255.64</td>
-            <td>2001:504:27:0:0:4E93::1</td>
-            <td><a href="mailto:peering@charter.com">peering@charter.com</a></td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/9</td>
-            <td>Mammoth</td>
-            <td class="as"><a href="http://bgp.he.net/AS10835">10835</a></td>
-            <td>206.108.255.15</td>
-            <td>2001:504:27:0:0:2A53::1</td>
-            <td><a href="mailto:nevin@arcustech.com">noc@vcn.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr class="unused"><!-- Inactive since before 2014-01-30. Expire on 2014-04-30. -->
-            <td>Xe-0/0/10</td>
-            <td>Arcustech</td>
-            <td class="as">TBD</td>
-            <td>206.108.255.20</td>
-            <td>2001:504:27:0:0:xxxx::1</td>
-            <td><a href="mailto:nevin@arcustech.com">nevin@arcustech.com</a></td>
-            <td>No</td>
-          </tr>
-          <tr class="unused">
-            <td>Xe-0/0/11</td>
-            <td rowspan="2">Northern Lights GigaPoP - Future</td>
-            <td rowspan="2" class="as"><a href="http://bgp.he.net/AS57">57</a></td>
-            <td rowspan="2">206.108.255.51</td>
-            <td rowspan="2">2001:504:27:0:0:0039::1</td>
-            <td rowspan="2"><a href="mailto:farmer@umn.edu">farmer@umn.edu</a></td>
-            <td rowspan="2">Yes</td>
-          </tr>
-          <tr class="unused">
-            <td>Xe-0/0/12</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/13</td>
-            <td>Hurricane Electric</td>
-            <td class="as"><a href="http://bgp.he.net/AS6939">6939</a></td>
-            <td>206.108.255.52</td>
-            <td>2001:504:27:0:0:1B1B::1</td>
-            <td><a href="mailto:peering@he.net">peering@he.net</a></td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/14</td>
-            <td>US Internet</td>
-            <td class="as"><a href="http://bgp.he.net/AS10242">10242</a></td>
-            <td>206.108.255.19</td>
-            <td>2001:504:27:0:0:2802::1</td>
-            <td><a href="mailto:support@usinternet.com">support@usinternet.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/15</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/16</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/17</td>
-            <td>Radio Link Internet</td>
-            <td class="as"><a href="http://bgp.he.net/AS53301">53301</a></td>
-            <td class="unused">206.108.255.31</td>
-            <td class="unused">2001:504:27:0:0:D035::1</td>
-            <td><a href="mailto:daniel.petsinger@radiolinkinternet.com">daniel.petsinger@radiolinkinternet.com</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/18</td>
-            <td>Enventis</td>
-            <td class="as"><a href="http://bgp.he.net/AS12042">12042</a></td>
-            <td>206.108.255.18</td>
-            <td>2001:504:27:0:0:2F0A::1</td>
-            <td><a href="mailto:peering@enventis.com">peering@enventis.com</a></td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/19</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/20</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/21</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/22</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/23</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/24</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/25</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/26</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/27</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/28</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/29</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/30</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/31</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/32</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/33</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>Xe-0/0/34</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr class="unused"><!-- New as of 2014-02-03, expires if not active by 2014-05-04. -->
-            <td>Xe-0/0/35</td>
-            <td>Emergent Networks</td>
+            <td>ge-1/0/12</td>
+            <td><a href="http://emergentnetworks.com" target="_blank">Emergent Networks</a></td>
             <td class="as"><a href="http://bgp.he.net/AS29762">29762</a></td>
             <td>206.108.255.30</td>
             <td class="unused">2001:504:27:0:0:7442::1</td>
@@ -586,25 +217,341 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Xe-0/0/36</td>
-            <td>HCMC</td>
-            <td class="as"><a href="http://bgp.he.net/AS40413">40413</a></td>
-            <td>206.108.255.29</td>
-            <td>2001:504:27:0:0:9DDD::1</td>
-            <td><a href="mailto:Daniel.Huwe@hcmed.org">Daniel.Huwe@hcmed.org</a></td>
+            <td>ge-1/0/13</td>
+            <td><a href="http://mduethernet.com" target="_blank">MDU Ethernet</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS13573">13573</a></td>
+            <td>206.108.255.13</td>
+            <td class="unused">2001:504:27:0:0:3505::1</td>
+            <td><a href="mailto:support@mduethernet.com">support@mduethernet.com</a></td>
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Xe-0/0/37</td>
-            <td><a href="#mankatonetworks">Mankato Networks Remote Switch</a></td>
+            <td>ge-1/0/14</td>
+            <td><a href="http://atomicdata.com" target="_blank">Atomic Data</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS25694">25694</a></td>
+            <td>206.108.255.14</td>
+            <td>2001:504:27:0:0:645E::1</td>
+            <td><a href="mailto:servicenotices@atomicdata.com">servicenotices@atomicdata.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/0/15</td>
+            <td><a href="http://aitech.net" target="_blank">Advanced Integrated Tech</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS13746">13746</a></td>
+            <td>206.108.255.25</td>
+            <td>2001:504:27:0:0:35B2::1</td>
+            <td><a href="mailto:peering@aitech.net">peering@aitech.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/0/16</td>
+            <td><a href="http://ivdesk.com" target="_blank">IVDesk</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS393639">393639</a></td>
+            <td>206.108.255.47</td>
+            <td class="unused">2001:504:27:0:6:01A7::1</td>
+            <td><a href="mailto:peering@ivdesk.com">peering@ivdesk.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/0/17</td>
+            <td><a href="http://onenetusa.com" target="_blank">OneNetUSA</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS46131">46131</a></td>
+            <td>206.108.255.46</td>
+            <td class="unused">2001:504:27:0:0:B433::1</td>
+            <td><a href="mailto:peering@onenetusa.com">peering@onenetusa.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/0/18</td>
+            <td><a href="http://veruscorp.com" target="_blank">Verus Corporation</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS26156">26156</a></td>
+            <td>206.108.255.33</td>
+            <td>2001:504:27:0:0:662C::1</td>
+            <td><a href="mailto:noc@veruscorp.com">noc@veruscorp.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused">
+            <td>ge-1/0/19</td>
             <td>&nbsp;</td>
-            <td>206.108.255.243</td>
-            <td>2001:504:27:0:0:D1AF::243</td>
-            <td><a href="mailto:jayhanke@mankatonetworks.net">jayhanke@mankatonetworks.net</a></td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused">
+            <td>ge-1/0/20</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused">
+            <td>ge-1/0/21</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td>Xe-0/0/38</td>
+            <td>ge-1/0/22</td>
+            <td>Route Server #1 Mgmt</td>
+            <td colspan="5">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>ge-1/0/23</td>
+            <td>Route Server #2 Mgmt</td>
+            <td colspan="5">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>ge-1/1/0</td><!-- Fiber -->
+            <td><a href="http://5nines.com" target="_blank">5 Nines</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS16842">16842</a></td>
+            <td>206.108.255.39</td>
+            <td>2001:504:27:0:0:41CA::1</td>
+            <td><a href="mailto:tk@5nines.com">tk@5nines.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/1/1</td><!-- Fiber -->
+            <td><a href="http://claimlynx.com" target="_blank">ClaimLynx</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS62708">62708</a></td>
+            <td>206.108.255.16</td>
+            <td>2001:504:27:0:0:F4F4::1</td>
+            <td><a href="mailto:root@claimlynx.com">root@claimlynx.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>ge-1/1/2</td><!-- Fiber -->
+            <td><a href="http://berbee.com" target="_blank">CDW/Berbee</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS3599">3599</a></td>
+            <td>206.108.255.26</td>
+            <td>2001:504:27:0:0:0E0F::1</td>
+            <td><a href="mailto:stahr@berbee.com">stahr@berbee.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused">
+            <td>ge-1/1/3</td><!-- Fiber -->
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/0</td>
+            <td><a href="http://dakotacarrier.com" target="_blank">Dakota Carrier Network</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS26794">26794</a></td>
+            <td>206.108.255.60<br>206.108.255.61</td>
+            <td class="unused">2001:504:27:0:0:68AA::1<br>2001:504:27:0:0:68AA::2</td>
+            <td><a href="mailto:dcnadmin@dakotacarrier.com">dcnadmin@dakotacarrier.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused">
+            <td>xe-0/0/1</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/2</td>
+            <td><a href="http://integra.net" target="_blank">Integra Telecom</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS7385">7385</a></td>
+            <td>206.108.255.62</td>
+            <td>2001:504:27:0:0:1CD9::1</td>
+            <td><a href="mailto:peering@integra.net">peering@integra.net</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/3&nbsp;(ae6)<br>xe-0/0/13</td>
+            <td><a href="http://he.net" target="_blank">Hurricane Electric</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS6939">6939</a></td>
+            <td>206.108.255.52</td>
+            <td>2001:504:27:0:0:1B1B::1</td>
+            <td><a href="mailto:peering@he.net">peering@he.net</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/4</td>
+            <td><a href="http://sdncommunications.com" target="_blank">South Dakota Networks</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS13576">13576</a></td>
+            <td>206.108.255.49</td>
+            <td>2001:504:27:0:0:3508::1</td>
+            <td><a href="mailto:peering@sdncommunications.com">peering@sdncommunications.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/5</td>
+            <td><a href="http://www.onvoy.com" target="_blank">Onvoy Voice Services</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS5715">5715</a></td>
+            <td>206.108.255.48</td>
+            <td class="unused">2001:504:27:0:0:1653::1</td>
+            <td><a href="mailto:craig.olson@onvoy.com">craig.olson@onvoy.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused"><!-- Allocated on 2015-04-09 for 1G to 10G upgrade. -->
+            <td>xe-0/0/6</td>
+            <td><a href="http://tdstelecom.com" target="_blank">TDS [Future]</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS4181">4181</a></td>
+            <td>206.108.255.4</td>
+            <td>2001:504:27:0:0:1055::1</td>
+            <td><a href="mailto:peering@tdstelecom.com">peering@tdstelecom.com</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/7</td>
+            <td><a href="http://arvig.com" target="_blank">Arvig</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS16904">16904</a></td>
+            <td>206.108.255.7</td>
+            <td>2001:504:27:0:0:4208::1</td>
+            <td><a href="mailto:peering@arvig.com">peering@arvig.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/8</td>
+            <td><a href="http://charter.com" target="_blank">Charter</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS20115">20115</a></td>
+            <td>206.108.255.64</td>
+            <td>2001:504:27:0:0:4E93::1</td>
+            <td><a href="mailto:peering@charter.com">peering@charter.com</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/9</td>
+            <td><a href="http://vcn.com" target="_blank">Mammoth</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS10835">10835</a></td>
+            <td>206.108.255.15</td>
+            <td>2001:504:27:0:0:2A53::1</td>
+            <td><a href="mailto:noc@vcn.com">noc@vcn.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/10</td>
+            <td><a href="http://longlines.com">Longlines</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS32867">32867</a></td>
+            <td>206.108.255.38</td>
+            <td class="unused">2001:504:27:0:0:8063::1</td>
+            <td><a href="mailto:Dan.Winkel@longlines.biz">Dan.Winkel@longlines.biz</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/11&nbsp;(ae0)<br>xe-0/0/12</td>
+            <td><a href="http://www.northernlights.gigapop.net/" target="_blank">Northern Lights GigaPoP<br>(University of Minnesota)</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS57">57</a></td>
+            <td>206.108.255.51</td>
+            <td>2001:504:27:0:0:0039::1</td>
+            <td><a href="mailto:farmer@umn.edu">farmer@umn.edu</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>(via GigaPoP)</td>
+            <td><a href="http://wiscnet.net/" target="_blank">WiscNet</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS2381">2381</a></td>
+            <td>206.108.255.125</td>
+            <td>2001:504:27:0:0:094D::1</td>
+            <td><a href="mailto:peering@wiscnet.net">peering@wiscnet.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/14</td>
+            <td><a href="http://usinternet.com" target="_blank">US Internet</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS10242">10242</a></td>
+            <td>206.108.255.19</td>
+            <td>2001:504:27:0:0:2802::1</td>
+            <td><a href="mailto:support@usinternet.com">support@usinternet.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/15</td>
+            <td><a href="http://www.nutelecom.net">NU-Telecom</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS23465">23465</a></td>
+            <td>206.108.255.106</td>
+            <td class="unused">2001:504:27:0:0:64FC::1</td>
+            <td><a href="mailto:noc@nu-telecom.net">noc@nu-telecom.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/16</td>
+            <td>Broadband Visions</td>
+            <td class="as"><a href="http://bgp.he.net/AS25615">25615</a></td>
+            <td>206.108.255.107</td>
+            <td>2001:504:27:0:0:640F::1</td>
+            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused"><!-- Last communication 2015-06-22. Expire on 2015-12-19. -->
+            <td>xe-0/0/17</td>
+            <td><a href="http://radiolinkinternet.com" target="_blank">Radio Link Internet</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS53301">53301</a></td>
+            <td>206.108.255.31</td>
+            <td>2001:504:27:0:0:D035::1</td>
+            <td><a href="mailto:daniel.petsinger@radiolinkinternet.com">daniel.petsinger@radiolinkinternet.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/18</td>
+            <td><a href="http://enventis.com" target="_blank">Consolidated Communications</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS12042">12042</a></td>
+            <td>206.108.255.18</td>
+            <td>2001:504:27:0:0:2F0A::1</td>
+            <td><a href="mailto:peering@enventis.com">peering@enventis.com</a></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/19</td>
+            <td><a href="https://www.code42.com" target="_blank">Code42</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS62715">62715</a></td>
+            <td>206.108.255.32</td>
+            <td>2001:504:27:0:0:F4FB::1</td>
+            <td><a href="mailto:peering@code42.com">peering@code42.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused">
+            <td>xe-0/0/20</td>
+            <td><a href="http://wins.net" target="_blank">Airstream [Future]</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS11796">11796</a></td>
+            <td>206.108.255.10</td>
+            <td>2001:504:27:0:0:2E14::1</td>
+            <td><a href="mailto:nmc@wins.net">nmc@wins.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/21&nbsp;(ae2)<br>xe-0/0/22<br>xe-0/0/23<br>xe-0/0/24<br>xe-0/2/0<br>xe-0/2/1<br>xe-0/2/2</td>
+            <td><a href="https://www.netflix.com" target="_blank">Netflix</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS2906">2906</a></td>
+            <td>206.108.255.35</td>
+            <td>2001:504:27:0:0:0B5A::1</td>
+            <td><a href="mailto:peering@netflix.com">peering@netflix.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/25&nbsp;(ae4)<br>xe-0/0/27<br>xe-0/0/28<br>xe-0/0/31</td>
+            <td><a href="https://www.google.com" target="_blank">Google</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS36040">36040</a></td>
+            <td>206.108.255.37</td>
+            <td>2001:504:27:0:0:8CC8::1</td>
+            <td><a href="mailto:peering@google.com">peering@google.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused"><!-- Allocated on 2015-07-09. Expire on 2016-01-05. -->
+            <td>xe-0/0/26</td>
+            <td><a href="https://www.gpcom.com/">Great Plains Communications</td>
+            <td class="as"><a href="http://bgp.he.net/AS13807">13807</a></td>
+            <td>206.108.255.122</td>
+            <td>2001:504:27:0:0:35EF::1</td>
+            <td><a href="mailto:peering@gpcom.com">peering@gpcom.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/29&nbsp;(ae5)<br>xe-0/0/38</td>
             <td><a href="#cns">CNS Remote Switch</a></td>
             <td>&nbsp;</td>
             <td>206.108.255.253</td>
@@ -612,22 +559,115 @@
             <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
             <td>&nbsp;</td>
           </tr>
+          <tr class="unused"><!-- Added on 2014-07-03. Expire on 2014-12-30. -->
+            <td>xe-0/0/30</td>
+            <td><a href="http://acentek.net" target="_blank">Acentek</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS40328">40328</a></td>
+            <td>206.108.255.109</td>
+            <td class="unused">2001:504:27:0:0:9D88::1</td>
+            <td><a href="mailto:peering@acentek.net">peering@acentek.net</a></td>
+            <td>Yes</td>
+          </tr>
           <tr>
-            <td>Xe-0/0/39</td>
-            <td>Akamai</td>
+            <td>xe-0/0/32</td>
+            <td><a href="https://www.vastbroadband.com" target="_blank">Vast Broadband</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS20412">20412</a></td>
+            <td>206.108.255.24</td>
+            <td class="unused">2001:504:27:0:0:4FBC::1</td>
+            <td><a href="mailto:peering@vastbroadband.com">peering@vastbroadband.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/33</td>
+            <td><a href="http://scibroadband.com" target="_blank">Savage Communications</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS23260">23260</a></td>
+            <td>206.108.255.17</td>
+            <td class="unused">2001:504:27:0:0:5ADC::1</td>
+            <td><a href="mailto:mike@scicable.net">mike@scicable.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/34&nbsp;(ae1)<br>xe-0/0/39</td>
+            <td><a href="http://akamai.com" target="_blank">Akamai</a></td>
             <td class="as"><a href="http://bgp.he.net/AS20940">20940</a></td>
             <td>206.108.255.84</td>
             <td>2001:504:27:0:0:51CC::1</td>
             <td><a href="mailto:peering@akamai.com">peering@akamai.com</a></td>
             <td>Yes</td>
           </tr>
+          <tr>
+            <td>xe-0/0/35</td>
+            <td><a href="http://compudyne.net" target="_blank">Compudyne</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS47096">47096</a></td>
+            <td>206.108.255.101</td>
+            <td>2001:504:27:0:0:B7F8::1</td>
+            <td><a href="mailto:ipadmin@compudyne.net">ipadmin@compudyne.net</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/36</td>
+            <td><a href="http://hcmed.org" target="_blank">HCMC</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS40413">40413</a></td>
+            <td>206.108.255.29</td>
+            <td>2001:504:27:0:0:9DDD::1</td>
+            <td><a href="mailto:Daniel.Huwe@hcmed.org">Daniel.Huwe@hcmed.org</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/37</td>
+            <td><a href="#mankatonetworks">Mankato Networks Remote Switch</a></td>
+            <td>&nbsp;</td>
+            <td>206.108.255.243</td>
+            <td>2001:504:27:0:0:D1AF::243</td>
+            <td><a href="mailto:dangieser@mankatonetworks.net">dangieser@mankatonetworks.net</a></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused"><!-- Allocated on 2015-08-13. Expire on 2016-02-09. -->
+            <td>xe-0/1/0&nbsp;(ae7)<br>xe-0/1/1</td>
+            <td><a href="https://www.cloudflare.com" target="_blank">CloudFlare</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS13335">13335</a></td>
+            <td>206.108.255.45</td>
+            <td>2001:504:27:0:0:3417::1</td>
+            <td><a href="mailto:peering@cloudflare.com">peering@cloudflare.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr class="unused">
+            <td>xe-0/1/2</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused">
+            <td>xe-0/1/3</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused"><!-- Allocated on 2015-10-25. Expire on 2016-04-22. -->
+            <td>xe-0/2/3</td>
+            <td><a href="http://hoyosconsulting.com" target="_blank">Hoyos Consulting</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS53597">53597</a></td>
+            <td>206.108.255.65</td>
+            <td>2001:504:27:0:0:d15d::1</td>
+            <td><a href="mailto:noc@hoyosconsulting.com">noc@hoyosconsulting.com</a></td>
+            <td>Yes</td>
+          </tr>
         </tbody>
       </table>
-    </div>
+</div>
+    </div> <!-- /container -->
 
-    <div>
-      <h2 id="cns">CNS Remote Switch</h2>
-      <p>Fiber 1/10G ports available. Cologix discounted connections are available on this switch.</p>
+    <div class="container">
+	 
+<div class="cpw">
+<h2 id="cns">CNS Remote Switch</h2>
+<p>Fiber 1/10G ports available. Cologix discounted connections are available on this switch.</p>
       <table border="1">
         <thead>
           <tr>
@@ -642,17 +682,26 @@
         </thead>
         <tbody>
           <tr>
-            <td>Ge0/1</td>
-            <td>Cooperative Network Services (CNS)</td>
-            <td class="as"><a href="http://bgp.he.net/AS32609">32609</a></td>
-            <td>206.108.255.50</td>
-            <td>2001:504:27:0:0:7F61::1</td>
-            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
+            <td>Te0/6</td>
+            <td><a href="http://702com.com">702 Communications</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS15267">15267</a></td>
+            <td>206.108.255.54</td>
+            <td>2001:504:27:0:0:3BA3::1</td>
+            <td><a href="mailto:dpoehls@702communications.com">dpoehls@702communications.com</a></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Te0/7</td>
+            <td><a href="http://www.newcorewireless.net">New Core Wireless</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS27204">27204</a></td>
+            <td>206.108.255.128</td>
+            <td>2001:504:27:0:0:6a44::1</td>
+            <td><a href="mailto:network@7sigma.com">network@7sigma.com</a></td>
             <td>Yes</td>
           </tr>
           <tr>
             <td>Te0/8</td>
-            <td>Stellar Association</td>
+            <td><a href="http://stellarllc.net" target="_blank">Stellar Association</a></td>
             <td class="as"><a href="http://bgp.he.net/AS36374">36374</a></td>
             <td>206.108.255.53</td>
             <td>2001:504:27:0:0:8E16::1</td>
@@ -665,16 +714,16 @@
           </tr>
           <tr>
             <td>Te0/11</td>
-            <td>Northern Lights GigaPoP (University of Minnesota)</td>
-            <td class="as"><a href="http://bgp.he.net/AS57">57</a></td>
-            <td>206.108.255.51</td>
-            <td>2001:504:27:0:0:0039::1</td>
-            <td><a href="mailto:farmer@umn.edu">farmer@umn.edu</a></td>
+            <td>Cooperative Network Services (CNS)</td>
+            <td class="as"><a href="http://bgp.he.net/AS32609">32609</a></td>
+            <td>206.108.255.50</td>
+            <td>2001:504:27:0:0:7F61::1</td>
+            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
             <td>Yes</td>
           </tr>
           <tr>
             <td>Te0/12</td>
-            <td>Paul Bunyan Communications</td>
+            <td><a href="http://paulbunyan.net" target="_blank">Paul Bunyan Communications</a></td>
             <td class="as"><a href="http://bgp.he.net/AS14371">14371</a></td>
             <td>206.108.255.120</td>
             <td>2001:504:27:0:0:3823::1</td>
@@ -683,7 +732,7 @@
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td>Halstad Telephone Company</td>
+            <td><a href="http://www.halstadtel.com" target="_blank">Halstad Telephone Company</a></td>
             <td class="as"><a href="http://bgp.he.net/AS21730">21730</a></td>
             <td>206.108.255.127</td>
             <td>2001:504:27:0:0:54E2::1</td>
@@ -692,11 +741,15 @@
           </tr>
         </tbody>
       </table>
-    </div>
+</div>
+</div>	
 
-    <div>
-      <h2 id="mankatonetworks">Mankato Networks Remote Switch</h2>
-      <p>Copper 10/100/1000 ports available.</p>
+
+    <div class="container">
+	 
+<div class="cpw mb">
+<h2 id="mankatonetworks">Mankato Networks Remote Switch</h2>
+<p>Copper 10/100/1000 ports available.</p>
       <table border="1">
         <thead>
           <tr>
@@ -711,26 +764,17 @@
         </thead>
         <tbody>
           <tr>
-            <td>&nbsp;</td>
-            <td>Vaultas</td>
+            <td>ge-0/0/7</td>
+            <td><a href="http://vaultas.com" target="_blank">Vaultas</a></td>
             <td class="as"><a href="http://bgp.he.net/AS53480">53480</a></td>
             <td>206.108.255.100</td>
             <td>2001:504:27:0:0:D0E8::1</td>
-            <td><a href="mailto:junger@bcsdatacenters.com">junger@bcsdatacenters.com</a></td>
+            <td><a href="mailto:john@vaultas.com">john@vaultas.com</a></td>
             <td>Yes</td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
-            <td>Compudyne</td>
-            <td class="as"><a href="http://bgp.he.net/AS47096">47096</a></td>
-            <td>206.108.255.101</td>
-            <td>2001:504:27:0:0:B7F8::1</td>
-            <td><a href="mailto:ipadmin@compudyne.net">ipadmin@compudyne.net</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>MyTelepath</td>
+            <td>ge-0/0/9</td>
+            <td><a href="http://mytelepath.com" target="_blank">MyTelepath</a></td>
             <td class="as"><a href="http://bgp.he.net/AS20338">20338</a></td>
             <td>206.108.255.102</td>
             <td class="unused">2001:504:27:0:0:4F72::1</td>
@@ -738,8 +782,8 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
-            <td>Genesis Wireless/RevNetData</td>
+            <td>ge-0/0/10</td>
+            <td><a href="http://igenesis.us" target="_blank">Genesis Wireless/RevNetData</a></td>
             <td class="as"><a href="http://bgp.he.net/AS30032">30032</a></td>
             <td>206.108.255.103</td>
             <td class="unused">2001:504:27:0:0:7550::1</td>
@@ -747,25 +791,26 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
-            <td>Jaguar Communications</td>
+            <td>ge-0/0/11</td>
+            <td><a href="http://jagcom.net" target="_blank">Jaguar Communications</a></td>
             <td class="as"><a href="http://bgp.he.net/AS15011">15011</a></td>
             <td>206.108.255.105</td>
             <td class="unused">2001:504:27:0:0:3AA3::1</td>
             <td><a href="mailto:mwilker@jagcom.net">mwilker@jagcom.net</a></td>
             <td>Yes</td>
-          </tr>          <tr>
-            <td>Ge-0/0/1</td>
-            <td>Windomnet (City of Windom)</td>
-            <td class="as"><a href="http://bgp.he.net/AS46692">46692</a></td>
-            <td>206.108.255.104</td>
-            <td>2001:504:27:0:0:B664::1</td>
+          </tr>
+          <tr>
+            <td>ge-0/0/14</td>
+            <td><a href="http://monticellofiber.com" target="_blank">Monticello Fibernet (City of Monticello)</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS393466">393466</a></td>
+            <td>206.108.255.108</td>
+            <td class="unused">2001:504:27:0:0006:00FA::1</td>
             <td><a href="mailto:noc@windomnet.com">noc@windomnet.com</a></td>
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Xe-0/1/1</td>
-            <td>Wikstrom Telephone Company (Wiktel)</td>
+            <td>xe-0/1/1</td>
+            <td><a href="http://wiktel.com" target="_blank">Wikstrom Telephone Company (Wiktel)</a></td>
             <td class="as"><a href="http://bgp.he.net/AS33362">33362</a></td>
             <td>206.108.255.121</td>
             <td>2001:504:27:0:0:8252::1</td>
@@ -773,30 +818,62 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Ge-0/1/2</td>
-            <td>NU-Telecom</td>
-            <td class="as"><a href="http://bgp.he.net/AS25852">25852</a></td>
-            <td>206.108.255.106</td>
-            <td class="unused">2001:504:27:0:0:64FC::1</td>
-            <td><a href="mailto:noc@nu-telecom.net">noc@nu-telecom.net</a></td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Ge-0/1/3</td>
-            <td>Broadband Visions</td>
-            <td class="as"><a href="http://bgp.he.net/AS25615">25615</a></td>
-            <td>206.108.255.107</td>
-            <td>2001:504:27:0:0:640F::1</td>
-            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
+            <td>xe-0/1/3</td>
+            <td><a href="http://windomnet.com" target="_blank">Windomnet (City of Windom)</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS46692">46692</a></td>
+            <td>206.108.255.104</td>
+            <td>2001:504:27:0:0:B664::1</td>
+            <td><a href="mailto:noc@windomnet.com">noc@windomnet.com</a></td>
             <td>Yes</td>
           </tr>
         </tbody>
       </table>
-    </div>
+</div>
+</div>
 
-    <div>
-      <h3><a href="/">MICE Homepage</a></h3>
-    </div>
+	
+<div class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="news"><h1>Events</h1>
+MICE User Group 18<br>
+November 16, 1:00pm<br>
+511 Building Cafeteria<br>
+UG 19 on Jan 20; UG 20 on Mar 23
+</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="linksbox">
+<h1>Links</h1>
+<ul class="linkbox">
+<li><a href="http://micelg.usinternet.com/cacti/">MICE Traffic Stats</a></li>
+<li><a href="http://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">Mailing List</a><li>
+<li><a href="https://www.peeringdb.com/private/exchange_view.php?id=446">PeeringDB</a><li>
+</ul>
+</div>
+</div>
+<div class="col-md-3">
+<div class="contactbox">
+<h1>Contact Us</h1>
+<a href="mailto:peering@micemn.net">peering@micemn.net</a><br>
+<a href="http://www.linkedin.com/groups/Midwest-Internet-Cooperative-Exchange-3000346?mostPopular=&gid=3000346">LinkedIn Group</a><br>
+<a href="contact.html">Questions?</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
