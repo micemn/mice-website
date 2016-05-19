@@ -102,7 +102,7 @@ set ethernet-switching-options storm-control interface all
 </div>
 
 <div class="container">
-<div class="cpw mb">
+<div class="cpw">
 <h2>MICE Cisco Switch Configuration</h2>
 <p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
 <pre>
@@ -121,6 +121,21 @@ storm-control broadcast level 20.00
 spanning-tree bpdufilter enable
 no cdp enable
 </pre>
+</div>
+</div>
+
+<div class="container">
+<div class="cpw mb">
+<h2>MICE Communities</h2>
+<p>The default behavior of the MICE route servers is to announce all routes to all peers. The following communities modify the annoucements:</p>
+<pre>
+  0:peerAS     -- Do not announce the route to the specified peer.
+
+  0:53679      -- Only announce the route to specified peers (see below).
+  53679:peerAS -- Announce the route to the specified peer.
+</pre>
+<p>For example, setting 0:1234 and 0:5678 causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.</p>
+<p>To use an opt-in model, set 0:53679 plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 causes the route server to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="http://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">mice-discuss mailing list</a> to hear about new members connecting.
 </div>
 </div>
 
