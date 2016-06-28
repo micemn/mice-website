@@ -268,3 +268,6 @@ td.as {
 .unused {
 	color: gray;
 }
+code {
+    color: #333;
+}
