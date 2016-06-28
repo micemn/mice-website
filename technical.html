@@ -125,7 +125,7 @@ no cdp enable
 </div>
 
 <div class="container">
-<div class="cpw mb">
+<div class="cpw">
 <h2>MICE Communities</h2>
 <p>The default behavior of the MICE route servers is to announce all routes to all peers. The following communities modify the annoucements:</p>
 <pre>
@@ -136,6 +136,29 @@ no cdp enable
 </pre>
 <p>For example, setting 0:1234 and 0:5678 causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.</p>
 <p>To use an opt-in model, set 0:53679 plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 causes the route server to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="http://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">mice-discuss mailing list</a> to hear about new members connecting.
+</div>
+</div>
+
+<div class="container">
+<div class="cpw mb">
+<h2>Remote Switches</h2>
+<p>The process for connecting a new remote switch is as follows:
+<ol>
+<li>The remote switch operator will provide a technical proposal to the board.</li>
+<li>The board will publish the proposal to the discussion list.</li>
+<li>After a reasonable comment period, the board will approve or deny the proposal.</li>
+</ol>
+</p>
+<p>Remote switch operators&#8217; obligations include (but are not necessarily limited to):
+<ul>
+<li>Operators must obtain prior approval from the board for modifications.</li>
+<li>Operators are responsible for the costs of operating their remote switch and the links to the core switch. They must monitor their traffic levels and promptly add capacity to keep the links running congestion-free.</li>
+<li>Operators must enforce MICE&#8217;s technical port rules on their remote switches.</li>
+<li>Operators must coordinate participant connections and disconnections with MICE. MICE allocates exchange IP addresses and documents participant connections.</li>
+<li>Operators must inform their participants that the participants are not connecting directly to MICE. The remote switch operator cannot claim to be MICE.</li>
+<li>Operators must inform their participants that the participants are also subject to MICE rules, procedures, and costs.</li>
+</ul>
+</p>
 </div>
 </div>
 
