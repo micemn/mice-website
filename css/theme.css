@@ -271,3 +271,8 @@ td.as {
 code {
     color: #333;
 }
+table.participants,
+table.participants td,
+table.participants th {
+	border: 1px solid gray
+}
