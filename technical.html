@@ -126,6 +126,13 @@ no cdp enable
 
 <div class="container">
 <div class="cpw">
+<h2>Route Servers</h2>
+<ul>
+<li>Route Server 1: 206.108.255.1 / 2001:504:27::d1af:0:1</li>
+<li>Route Server 2: 206.108.255.2 / 2001:504:27::d1af:0:2</li>
+<li>The route servers do not add the MICE AS to the AS path.</li>
+<li>The route servers enforce a max-prefix limit of 1000 by default. Exceptions will be made for larger networks upon request.</li>
+</ul>
 <h2>MICE Communities</h2>
 <p>The default behavior of the MICE route servers is to announce all routes to all peers. The following communities modify the annoucements:</p>
 <pre>
