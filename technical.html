@@ -80,7 +80,7 @@
 <li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M</li>
 <li>A maximum of 5 incoming MAC addresses; in practice, you should use only one</li>
 <li>For recommendations on how to configure your equipment, see the excellent <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</li>
-<li>Note that your BGP sessions to the route server likely need <code>no bgp enforce-first-as</code> or similar. The route server does not add the MICE AS to the AS path.</li>
+<li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.</li>
 </ul>
 </div>
 </div>
@@ -135,7 +135,7 @@ no cdp enable
   53679:peerAS -- Announce the route to the specified peer.
 </pre>
 <p>For example, setting 0:1234 and 0:5678 causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.</p>
-<p>To use an opt-in model, set 0:53679 plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 causes the route server to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="http://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">mice-discuss mailing list</a> to hear about new members connecting.
+<p>To use an opt-in model, set 0:53679 plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="http://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">mice-discuss mailing list</a> to hear about new members connecting.
 </div>
 </div>
 
