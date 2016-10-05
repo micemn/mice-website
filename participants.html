@@ -445,7 +445,7 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <td>xe-2/0/0</td>
+            <td>ge-2/0/0</td>
             <td>MICE Route Server #2</td>
             <td>206.108.255.2</td>
             <td>2001:504:27:0:0:D1AF::2</td>
@@ -647,26 +647,21 @@
           <tr>
             <td>ge-0/0/0</td>
             <td><a href="telnet://rviews:@route-server.micemn.net:23">MICE Looking Glass</A></td>
-            <td rowspan="2" class="as">&nbsp;</td>
+            <td rowspan="3" class="as">&nbsp;</td>
             <td>206.108.255.250</td>
             <td>2001:504:27:0:0:D1AF::F250</td>
-            <td rowspan="2"><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
-            <td rowspan="2">&nbsp;</td>
+            <td rowspan="3"><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td rowspan="3">&nbsp;</td>
           </tr>
           <tr>
             <td>ge-0/0/1</td>
-            <td>MICE Route Server #1</td>
-            <td>206.108.255.1</td>
-            <td>2001:504:27:0:0:D1AF::1</td>
+            <td>MICE Route Server #1 Mgmt</td>
+            <td rowspan="2">&nbsp;</td>
+            <td rowspan="2">&nbsp;</td>
           </tr>
-          <tr class="unused">
+          <tr>
             <td>ge-0/0/2</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>MICE Route Server #2 Mgmt</td>
           </tr>
           <tr><!-- ipHouse is installing a remote switch and will vacate this port. -->
             <td>ge-0/0/3</td>
@@ -846,20 +841,30 @@
           </tr>
           <tr>
             <td>ge-0/0/22</td>
-            <td>MICE Route Server #1 Mgmt</td>
-            <td rowspan="3">&nbsp;</td>
-            <td rowspan="3">&nbsp;</td>
-            <td rowspan="3">&nbsp;</td>
-            <td rowspan="3"><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
-            <td rowspan="3">&nbsp;</td>
+            <td>MICE Route Server #1</td>
+            <td>&nbsp;</td>
+            <td>206.108.255.1</td>
+            <td>2001:504:27:0:0:D1AF::1</td>
+            <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td>&nbsp;</td>
           </tr>
-          <tr>
+          <tr class="unused">
             <td>ge-0/0/23</td>
-            <td>MICE Route Server #2 Mgmt</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
-          <tr><!-- xe-0/1/0 is connected to xe-0/2/2 and xe-0/1/2 is connected to xe-2/0/16 via 10G DAC cables -->
+          <tr><!-- xe-0/1/0 is connected to xe-0/2/2 and xe-0/1/2 is connected to xe-2/0/16 via 10G DAC cables. -->
             <td>xe-0/1/0<br>xe-0/1/2 (ae0)</td>
             <td><a href="#mice10g">MICE Core Stack</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td>&nbsp;</td>
           </tr>
         </tbody>
       </table>
