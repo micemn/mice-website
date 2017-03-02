@@ -3,7 +3,7 @@ $name   = $_REQUEST["name"];
 $email  = $_REQUEST["email"];
 $mobile = $_REQUEST["mobile"];
 $msg    = $_REQUEST["msg"];
-$to     = "rlaager@wiktel.com";
+$to     = "chiefmanager@micemn.net";
 
 if (isset($email) && isset($name) && isset($msg))
 {
