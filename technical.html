@@ -88,6 +88,31 @@
 
 <div class="container">
 <div class="cpw">
+<h2>MICE Arista Switch Configuration</h2>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<pre>
+errdisable recovery cause bpduguard
+errdisable recovery cause link-flap
+errdisable recovery cause portsec
+no lldp run
+platform fap voq scheduling round-robin
+platform sand lag hardware-only
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree portfast bpdufilter default
+interface EthernetX/X
+  mtu 9214
+  switchport port-security maximum 5
+  switchport port-security
+  storm-control broadcast level 1
+  storm-control multicast level 1
+  spanning-tree portfast
+</pre>
+</div>
+</div>
+
+<div class="container">
+<div class="cpw">
 <h2>MICE Juniper Switch Configuration</h2>
 <p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
 <pre>
