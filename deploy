@@ -1,0 +1,7 @@
+#!/bin/sh -eu
+rsync -rtv --delete \
+    --exclude=deploy \
+    --exclude=.git \
+    --exclude=.well-known \
+    ./ \
+    av00117@162.247.143.2:www/public_html/
