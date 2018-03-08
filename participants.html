@@ -529,10 +529,10 @@
           <tr>
             <td>Ethernet4/1</td>
             <td>1G</td>
-            <td>MICE Route Server #1</td>
+            <td>MICE Route Server #2</td>
             <td>&nbsp;</td>
-            <td>206.108.255.1</td>
-            <td>2001:504:27:0:0:D1AF::1</td>
+            <td>206.108.255.2</td>
+            <td>2001:504:27:0:0:D1AF::2</td>
             <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
             <td>&nbsp;</td>
             <td>Yes</td>
@@ -1118,16 +1118,16 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
-          <tr>
+          <tr class="unused">
             <td>Ethernet5/1</td>
-            <td>1G</td>
-            <td>MICE Route Server #2</td>
+            <td>10G</td>
             <td>&nbsp;</td>
-            <td>206.108.255.2</td>
-            <td>2001:504:27:0:0:D1AF::2</td>
-            <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td class="as">&nbsp;</td>
             <td>&nbsp;</td>
-            <td>Yes</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
           <tr class="unused">
@@ -1533,25 +1533,20 @@
             <td>ge-0/0/0</td>
             <td>1G</td>
             <td><a href="telnet://rviews:@route-server.micemn.net:23">MICE Looking Glass</A></td>
-            <td class="as">&nbsp;</td>
+            <td rowspan="2" class="as">&nbsp;</td>
             <td>206.108.255.250</td>
             <td>2001:504:27:0:0:D1AF::F250</td>
-            <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td rowspan="2"><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td rowspan="2">&nbsp;</td>
+            <td rowspan="2">&nbsp;</td>
+            <td rowspan="2">&nbsp;</td>
           </tr>
-          <tr class="unused">
+          <tr>
             <td>ge-0/0/1</td>
             <td>1G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>MICE Route Server #1</td>
+            <td>206.108.255.1</td>
+            <td>2001:504:27:0:0:D1AF::1</td>
           </tr>
           <tr class="unused">
             <td>ge-0/0/2</td>
@@ -1793,14 +1788,14 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
-          <tr><!-- MICE Route Server #1 is moving to Ethernet 4/1. -->
+          <tr class="unused">
             <td>ge-0/0/22</td>
             <td>1G</td>
-            <td>MICE Route Server #1</td>
             <td>&nbsp;</td>
-            <td>206.108.255.1</td>
-            <td>2001:504:27:0:0:D1AF::1</td>
-            <td><a href="mailto:peering@micemn.net">peering@micemn.net</a></td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
