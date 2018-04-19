@@ -166,7 +166,7 @@
             <td>&nbsp;</td>
             <td>Paid 2018</td>
           </tr>
-          <tr class="unused"><!-- CNS is upgrading this from 30G on Ethernet4/38, Ethernet4/42, and Ethernet5/42. -->
+          <tr>
             <td>Ethernet3/7/1&nbsp;(Po22)</td>
             <td>100G</td>
             <td><a href="#cns">CNS Remote Switch</a></td>
@@ -958,17 +958,17 @@
             <td>&nbsp;</td>
             <td>Paid 2018</td>
           </tr>
-          <tr><!-- CNS is upgrading this to 100G on Ethernet3/7/1. -->
-            <td>Ethernet4/38&nbsp;(Po5)<br>Ethernet4/42<br>Ethernet5/42</td>
-            <td>30G</td>
-            <td><a href="#cns">CNS Remote Switch</a></td>
+          <tr class="unused">
+            <td>Ethernet4/38</td>
+            <td>10G</td>
             <td>&nbsp;</td>
-            <td>206.108.255.253</td>
-            <td class="unused">2001:504:27:0:0:D1AF::253</td>
-            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
+            <td class="as">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>Paid 2018</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
           <tr class="unused">
             <td>Ethernet4/39</td>
@@ -1005,6 +1005,18 @@
             <td>No</td>
             <td>No</td>
             <td class="billed">Billed 2018</td>
+          </tr>
+          <tr class="unused">
+            <td>Ethernet4/42</td>
+            <td>10G</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
           <tr class="unused">
             <td>Ethernet4/43</td>
@@ -1480,6 +1492,18 @@
           </tr>
           <tr class="unused">
             <td>Ethernet5/39</td>
+            <td>10G</td>
+            <td>&nbsp;</td>
+            <td class="as">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="unused">
+            <td>Ethernet5/42</td>
             <td>10G</td>
             <td>&nbsp;</td>
             <td class="as">&nbsp;</td>
@@ -2156,7 +2180,7 @@
     <div class="container">
     <div class="cpw">
       <h2 id="cns">Cooperative Network Services (CNS)</h2>
-      <p><a href="https://www.cooperative-networks.com" target="_blank">CNS</a> operates a switch located in the 511 Building. Fiber 1G/10G ports are available. <a href="https://www.cologix.com" target="_blank">Cologix</a> discounted cross-connections are available to this switch; see also the <a href="people.html">People</a> page. Connectivity is at CNS's option, prices, and terms. CNS may offer extensions over its transport network.</p>
+      <p><a href="https://www.cooperative-networks.com" target="_blank">CNS</a> operates a switch located in the 511 Building. Fiber 1G/10G/100G ports are available. <a href="https://www.cologix.com" target="_blank">Cologix</a> discounted cross-connections are available to this switch; see also the <a href="people.html">People</a> page. Connectivity is at CNS's option, prices, and terms. CNS may offer extensions over its transport network.</p>
       <table class="participants">
         <thead>
           <tr>
@@ -2184,13 +2208,13 @@
             <td>No</td>
           </tr>
           <tr>
-            <td>Te1/2</td>
+            <td>Te1/2&nbsp;(Po2)</td>
             <td>10G</td>
-            <td><a href="http://www.newcorewireless.net" target="_blank">New Core Wireless</a></td>
-            <td class="as"><a href="http://bgp.he.net/AS27204">27204</a></td>
-            <td>206.108.255.128</td>
-            <td>2001:504:27:0:0:6A44::1</td>
-            <td><a href="mailto:network@7sigma.com">network@7sigma.com</a></td>
+            <td><a href="https://paulbunyan.net" target="_blank">Paul Bunyan Communications</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS14371">14371</a></td>
+            <td>206.108.255.120<br>206.108.255.119</td>
+            <td>2001:504:27:0:0:3823::1<br>2001:504:27:0:0:3823::2</td>
+            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
             <td>Yes</td>
             <td>No</td>
           </tr>
@@ -2208,11 +2232,11 @@
           <tr>
             <td>Te1/4</td>
             <td>10G</td>
-            <td><a href="https://paulbunyan.net" target="_blank">Paul Bunyan Communications</a></td>
-            <td class="as"><a href="http://bgp.he.net/AS14371">14371</a></td>
-            <td>206.108.255.120<br>206.108.255.119</td>
-            <td>2001:504:27:0:0:3823::1<br>2001:504:27:0:0:3823::2</td>
-            <td><a href="mailto:peering@paulbunyan.net">peering@paulbunyan.net</a></td>
+            <td><a href="http://www.newcorewireless.net" target="_blank">New Core Wireless</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS27204">27204</a></td>
+            <td>206.108.255.128</td>
+            <td>2001:504:27:0:0:6A44::1</td>
+            <td><a href="mailto:network@7sigma.com">network@7sigma.com</a></td>
             <td>Yes</td>
             <td>No</td>
           </tr>
@@ -2228,7 +2252,7 @@
             <td>No</td>
           </tr>
           <tr>
-            <td>Te2/1</td>
+            <td>Te1/6</td>
             <td>10G</td>
             <td><a href="https://www.cooperative-networks.com" target="_blank">Cooperative Network Services (CNS)</a></td>
             <td class="as"><a href="http://bgp.he.net/AS32609">32609</a></td>
@@ -2239,7 +2263,7 @@
             <td>No</td>
           </tr>
           <tr><!-- Pingable, not yet exchanging traffic. -->
-            <td>Te2/3</td>
+            <td>Te1/9</td>
             <td>10G</td>
             <td><a href="http://www.prtel.com" target="_blank">Otter Tail Telcom</a></td><!-- Otter Com Inc -->
             <td class="as"><a href="http://bgp.he.net/AS25637">25637</a></td>
