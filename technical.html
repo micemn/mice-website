@@ -76,7 +76,7 @@
 <li>A maximum of 5 incoming MAC addresses; in practice, you should use only one</li>
 <li>For recommendations on how to configure your equipment, see the excellent <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</li>
 <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.</li>
-<li>BFD is optional. See the <a href="#bfd">route server BFD section</a> below for more details on route server BFD. BFD on bilateral sessions is between members to negotiate. The <a href="participants.html">participants list</a> documents which networks have indicated they are willing to use BFD.</li>
+<li>BFD (<a href="https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection">Bidirectional Forwarding Detection</a>) is optional. See the <a href="#bfd">route server BFD section</a> below for more details on route server BFD. BFD on bilateral sessions is between members to negotiate. The <a href="participants.html">participants list</a> documents which networks have indicated they are willing to use BFD.</li>
 </ul>
 </div>
 </div>
