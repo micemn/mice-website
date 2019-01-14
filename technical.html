@@ -166,7 +166,7 @@ no cdp enable
 </ul>
 <h3 id="bfd">BFD</h3>
 <p>The route servers are configured for passive BFD, meaning they will use BFD with you, but you need to start it. That is, you must be configured for active BFD. The route servers are configured with a minimum interval of 500 ms and a multiplier of 3.</p>
-<h3>MICE Communities</h3>
+<h3 id="communities">MICE Communities</h3>
 <p>The default behavior of the MICE route servers is to announce all routes to all peers. The following communities modify the annoucements:</p>
 <pre>
   0:peerAS     -- Do not announce the route to the specified peer.
@@ -181,7 +181,7 @@ no cdp enable
 
 <div class="container">
 <div class="cpw mb">
-<h2>Remote Switches</h2>
+<h2 id="remotes">Remote Switches</h2>
 <p>If you are interested in operating a MICE remote switch, please contact <a href="mailto:peering@micemn.net">peering@micemn.net</a>.
 <p>The process for connecting a new remote switch is as follows:</p>
 <ol>
