@@ -216,6 +216,9 @@ border-top: 1px solid #195B7D;
 -moz-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
 box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.2);
 }
+.footer a {
+color: #fff;
+}
 .news {
 border-right: 1px solid #195B7D;
 height: 100px;
