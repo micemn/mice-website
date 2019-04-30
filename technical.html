@@ -74,7 +74,7 @@
 <li>An MTU of 9000 is supported</li>
 <li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M</li>
 <li>A maximum of 5 incoming MAC addresses; in practice, you should use only one</li>
-<li>For recommendations on how to configure your equipment, see the excellent <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</li>
+<li>For recommendations on how to configure your equipment, see the excellent <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a>.</li>
 <li>Use of the route servers is optional.</li>
 <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.</li>
 <li>BFD (<a href="https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection">Bidirectional Forwarding Detection</a>) is optional. See the <a href="#bfd">route server BFD section</a> below for more details on route server BFD. BFD on bilateral sessions is between members to negotiate. The <a href="participants.html">participants list</a> documents which networks have indicated they are willing to use BFD.</li>
@@ -93,7 +93,7 @@
 <div class="container">
 <div class="cpw">
 <h2>MICE Arista Switch Configuration</h2>
-<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a>.</p>
 <pre>
 errdisable recovery cause bpduguard
 errdisable recovery cause link-flap
@@ -118,7 +118,7 @@ interface EthernetX/X
 <div class="container">
 <div class="cpw">
 <h2>MICE Juniper Switch Configuration</h2>
-<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a>.</p>
 <pre>
 set interface X/X/X mtu 9216
 set protocols rstp interface X/X/X edge
@@ -134,7 +134,7 @@ set ethernet-switching-options storm-control interface all
 <div class="container">
 <div class="cpw">
 <h2>MICE Cisco Switch Configuration</h2>
-<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://ams-ix.net/technical/specifications-descriptions/config-guide">AMS-IX Config Guide</a>.</p>
+<p>This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a>.</p>
 <pre>
 system mtu jumbo 9198
 mac address-table aging-time 14400
