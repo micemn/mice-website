@@ -951,17 +951,17 @@
             <td>No</td>
             <td>Paid 2019</td>
           </tr>
-          <tr class="unused">
-            <td>Ethernet4/34</td>
-            <td>10G</td>
+          <tr>
+            <td>Ethernet4/34&nbsp;(Po?)<br>Ethernet5/34</td>
+            <td>20G</td>
+            <td><a href="#compudyne511">Compudyne 511 Remote Switch</a></td>
             <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
+            <td>206.108.255.230</td>
+            <td class="unused">2001:504:27:0:0:b7f8::230</td>
+            <td><a href="mailto:peering@compudyne.net">peering@compudyne.net</a></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="billed">To Be Billed 2019</td>
           </tr>
           <tr>
             <td>Ethernet4/35&nbsp;(Po20)<br>Ethernet5/35</td>
@@ -1415,18 +1415,6 @@
           </tr>
           <tr class="unused">
             <td>Ethernet5/33</td>
-            <td>10G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr class="unused">
-            <td>Ethernet5/34</td>
             <td>10G</td>
             <td>&nbsp;</td>
             <td class="as">&nbsp;</td>
@@ -2148,6 +2136,77 @@
     </div>
     </div> <!-- /container -->
 
+
+    <div class="container">
+    <div class="cpw">
+      <h2 id="compudyne511">Compudyne 511</h2>
+      <p><a href="http://compudyne.net" target="_blank">Compudyne</a> operates a switch located in the 511 Building. Fiber 1G/10G ports are available. <a href="https://www.cologix.com" target="_blank">Cologix</a> full-cost cross-connections are available to this switch; see also the <a href="people.html">People</a> page. Connectivity is at Compudyne's option, prices, and terms.</p>
+      <table class="participants">
+        <thead>
+          <tr>
+            <th>Port</th>
+            <th>Speed</th>
+            <th>Carrier</th>
+            <th>ASN</th>
+            <th>IPv4</th>
+            <th>IPv6</th>
+            <th>Contact</th>
+            <th>Route Server User</th>
+            <th>Supports BFD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="unused"><!-- Compudyne is moving from the Minnesota VoIP remote. -->
+            <td>xe-0/0/0&nbsp;(ae1)<br>xe-0/0/1</td>
+            <td>20G</td>
+            <td><a href="http://compudyne.net" target="_blank">Compudyne</a></td>
+            <td class="as"><a href="http://bgp.he.net/AS47096">47096</a></td>
+            <td>206.108.255.101</td>
+            <td>2001:504:27:0:0:B7F8::1</td>
+            <td><a href="mailto:peering@compudyne.net">peering@compudyne.net</a></td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>xe-0/0/29</td>
+            <td>10G</td>
+            <td><a href="#compudyneduluth">Compudyne Duluth Remote Switch</a></td>
+            <td>&nbsp;</td>
+            <td>206.108.255.231</td>
+            <td class="unused">2001:504:27:0:0:b7f8::231</td>
+            <td><a href="mailto:peering@compudyne.net">peering@compudyne.net</a></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- /container -->
+
+    <div class="container">
+    <div class="cpw">
+      <h2 id="compudyneduluth">Compudyne Duluth</h2>
+      <p><a href="http://compudyne.net" target="_blank">Compudyne</a> operates a switch located in the 306 W Michigan St Ste 200 in Duluth, MN. Fiber 1G/10G ports are available. Connectivity is at Compudyne's option, prices, and terms.</p>
+      <table class="participants">
+        <thead>
+          <tr>
+            <th>Port</th>
+            <th>Speed</th>
+            <th>Carrier</th>
+            <th>ASN</th>
+            <th>IPv4</th>
+            <th>IPv6</th>
+            <th>Contact</th>
+            <th>Route Server User</th>
+            <th>Supports BFD</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- /container -->
+
     <div class="container">
     <div class="cpw">
       <h2 id="cns">Cooperative Network Services (CNS)</h2>
@@ -2392,7 +2451,7 @@
             <td>Yes</td>
             <td>No</td>
           </tr>
-          <tr>
+          <tr><!-- Compudyne is moving to the Compudyne 511 remote. -->
             <td>Ethernet4</td>
             <td>10G</td>
             <td><a href="http://compudyne.net" target="_blank">Compudyne</a></td>
@@ -2402,7 +2461,6 @@
             <td><a href="mailto:peering@compudyne.net">peering@compudyne.net</a></td>
             <td>Yes</td>
             <td>Yes</td>
-            <td>No</td>
           </tr>
           <tr>
             <td>Ethernet5</td>
