@@ -2,6 +2,8 @@
 rsync -rtv --delete \
     --exclude=deploy \
     --exclude=.git \
+    --exclude=.~lock.* \
+    --exclude=.*.sw* \
     --exclude=.well-known \
     ./ \
     av00117@162.247.143.2:www/public_html/
