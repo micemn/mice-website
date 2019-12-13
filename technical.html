@@ -73,7 +73,7 @@
 <li>Proxy ARP shall be disabled. Use "no ip proxy-arp" or similar.</li>
 <li>An MTU of 9000 is supported</li>
 <li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M</li>
-<li>A maximum of 5 incoming MAC addresses; in practice, you should use only one</li>
+<li>A maximum of 1 incoming MAC address</li>
 <li>For recommendations on how to configure your equipment, see the excellent <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.</li>
 <li>Use of the route servers is optional.</li>
 <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.</li>
@@ -106,7 +106,7 @@ spanning-tree portfast bpduguard default
 spanning-tree portfast bpdufilter default
 interface EthernetX/X
   mtu 9214
-  switchport port-security maximum 5
+  switchport port-security maximum 1
   switchport port-security
   storm-control broadcast level 1
   storm-control multicast level 1
@@ -123,7 +123,7 @@ interface EthernetX/X
 set interface X/X/X mtu 9216
 set protocols rstp interface X/X/X edge
 set ethernet-switching-options bpdu-block interface X/X/X
-set ethernet-switching-options secure-access-port interface X/X/X mac-limit 5
+set ethernet-switching-options secure-access-port interface X/X/X mac-limit 1
 set ethernet-switching-options storm-control interface X/X/X bandwidth 100000
 set ethernet-switching-options bpdu-block disable-timeout 60
 set ethernet-switching-options storm-control interface all
@@ -144,7 +144,7 @@ errdisable recovery cause storm-control
 vtp mode transparent
 switchport block multicast
 switchport block unicast
-switchport port-security maximum 5
+switchport port-security maximum 1
 switchport port-security
 switchport port-security violation restrict
 storm-control broadcast level 20.00
