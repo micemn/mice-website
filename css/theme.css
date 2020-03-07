@@ -271,13 +271,12 @@ td.as {
 .unused {
 	color: gray;
 }
-.need-ap {
+.late {
 	background: red;
 }
 .billed {
 	background: yellow;
 }
-.unused .need-ap,
 .unused .billed {
 	background: white;
 }
