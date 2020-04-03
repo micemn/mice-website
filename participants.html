@@ -352,16 +352,16 @@
             <td class="billed">To Be Billed 2020</td>
           </tr>
           <tr class="unused">
-            <td>Ethernet3/22/1</td>
+            <td>Ethernet3/22/1&nbsp;(Po37)</td>
             <td>100G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td><a href="#wiscnet">WiscNet Remote Switch</a></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td><a href="mailto:peering@wiscnet.net">peering@wiscnet.net</a></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td class="billed">To Be Billed 2020</td>
           </tr>
           <tr class="unused">
             <td>Ethernet3/23/1</td>
@@ -2667,7 +2667,7 @@
             <td>Yes</td>
             <td>No</td>
           </tr>
-          <tr>
+          <tr><!-- WiscNet will be moving to their own remote switch. -->
             <td>&nbsp;</td>
             <td>10G</td>
             <td><a href="https://www.wiscnet.net" target="_blank">WiscNet</a></td>
@@ -2778,6 +2778,41 @@
             <td><a href="mailto:noc@cstech.com">noc@cstech.com</a></td>
             <td>Yes</td>
             <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div><!-- /container -->
+
+    <div class="container">
+    <div class="cpw">
+      <h2 id="wiscnet">WiscNet</h2>
+      <p><a href="https://www.wiscnet.net" target="_blank">WiscNet</a> operates a remote switch. Connectivity will be at WiscNet's option, prices, and terms. WiscNet typically connects education and research entities, not commercial networks.</p>
+      <table class="participants">
+        <thead>
+          <tr>
+            <th>Port</th>
+            <th>Speed</th>
+            <th>Carrier</th>
+            <th>ASN</th>
+            <th>IPv4</th>
+            <th>IPv6</th>
+            <th>Contact</th>
+            <th>Route Server User</th>
+            <th>Supports BFD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="unused"><!-- WiscNet will be moving from the GigaPoP. -->
+            <td>&nbsp;</td>
+            <td>10G</td><!-- They will probably be doing 100G? -->
+            <td><a href="https://www.wiscnet.net" target="_blank">WiscNet</a></td>
+            <td class="as"><a href="https://bgp.he.net/AS2381">2381</a></td>
+            <td>206.108.255.125</td>
+            <td>2001:504:27:0:0:094D::1</td>
+            <td><a href="mailto:peering@wiscnet.net">peering@wiscnet.net</a></td>
+            <td>Yes</td>
+            <td>Yes</td>
           </tr>
         </tbody>
       </table>
