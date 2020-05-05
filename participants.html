@@ -129,16 +129,17 @@
             <td>No</td>
             <td>Paid 2020</td>
           </tr>
-          <tr><!-- MAC address limit confirmation pending -->
+          <tr><!-- MAC address limit change pending -->
             <td>Ethernet3/4/1</td>
             <td>100G</td>
-            <td><a href="#gigapop">Northern Lights GigaPoP Remote Switch</a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td><a href="https://it.umn.edu/northern-lights-gigapop-introduction" target="_blank">Northern Lights GigaPoP<br>(University of Minnesota)</a></td>
+            <td class="as"><a href="https://bgp.he.net/AS57">57</a></td>
+            <!-- The use of .126 is temporary.  They plan to return it by the end of 2020. -->
+            <td>206.108.255.51<br>206.108.255.126</td>
+            <td>2001:504:27:0:0:0039::1<br>2001:504:27::39:0:2</td>
             <td><a href="mailto:farmer@umn.edu">farmer@umn.edu</a></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>Yes</td>
+            <td>Yes</td>
             <td>Paid 2020</td>
           </tr>
           <tr>
@@ -2639,53 +2640,6 @@
 
     <div class="container">
     <div class="cpw">
-      <h2 id="gigapop">Northern Lights GigaPoP</h2>
-      <p>The <a href="https://it.umn.edu/northern-lights-gigapop-introduction" target="_blank">Northern Lights GigaPoP</a> operates one or more remote switches. Connectivity will be at Northern Lights GigaPoP's option, prices, and terms. The GigaPoP typically connects education and government entities, not commercial networks.</p>
-      <table class="participants">
-        <thead>
-          <tr>
-            <th>Port</th>
-            <th>Speed</th>
-            <th>Carrier</th>
-            <th>ASN</th>
-            <th>IPv4</th>
-            <th>IPv6</th>
-            <th>Contact</th>
-            <th>Route Server User</th>
-            <th>Supports BFD</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&nbsp;</td>
-            <td>100G</td>
-            <td><a href="https://it.umn.edu/northern-lights-gigapop-introduction" target="_blank">Northern Lights GigaPoP<br>(University of Minnesota)</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS57">57</a></td>
-            <!-- The use of .126 is temporary.  They plan to return it by the end of 2020. -->
-            <td>206.108.255.51<br>206.108.255.126</td>
-            <td>2001:504:27:0:0:0039::1<br>2001:504:27::39:0:2</td>
-            <td><a href="mailto:farmer@umn.edu">farmer@umn.edu</a></td>
-            <td>Yes</td>
-            <td>Yes</td>
-          </tr>
-          <tr><!-- WiscNet will be moving to their own remote switch. -->
-            <td>&nbsp;</td>
-            <td>10G</td>
-            <td><a href="https://www.wiscnet.net" target="_blank">WiscNet</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS2381">2381</a></td>
-            <td>206.108.255.125</td>
-            <td>2001:504:27:0:0:094D::1</td>
-            <td><a href="mailto:peering@wiscnet.net">peering@wiscnet.net</a></td>
-            <td>Yes</td>
-            <td>Yes</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div><!-- /container -->
-
-    <div class="container">
-    <div class="cpw">
       <h2 id="southfront">South Front Networks</h2>
       <p><a href="https://southfront.io" target="_blank">South Front Networks</a> operates a switch located in its datacenter in Albert Lea, MN. Fiber 1G/10G ports are available. Connectivity is at South Front Networks's option, prices, and terms.</p>
       <table class="participants">
@@ -2826,7 +2780,7 @@
             <td>Yes</td>
             <td>Yes</td>
           </tr>
-          <tr class="unused"><!-- WiscNet will be moving from the GigaPoP. -->
+          <tr>
             <td>et-0/0/35</td>
             <td>100G</td>
             <td><a href="https://www.wiscnet.net" target="_blank">WiscNet</a></td>
