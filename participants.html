@@ -117,17 +117,23 @@
             <td>No</td>
             <td>To Be Billed 2021</td>
           </tr>
-          <tr>
-            <td>Ethernet3/3/1</td>
-            <td>100G</td>
-            <td><a href="https://www.akamai.com" target="_blank">Akamai</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS20940">20940</a></td>
+          <tr><!-- Additional port added 2021-06-16. Expire on 2021-12-13. -->
+            <td>Ethernet3/3/1&nbsp;(Po1)<br>Ethernet3/26/1</td>
+            <td>200G</td>
+            <td rowspan="2"><a href="https://www.akamai.com" target="_blank">Akamai</a></td>
+            <td rowspan="2" class="as"><a href="https://bgp.he.net/AS20940">20940</a></td>
             <td>206.108.255.84</td>
             <td>2001:504:27:0:0:51CC::1</td>
-            <td><a href="mailto:peering@akamai.com">peering@akamai.com</a></td>
-            <td>No</td>
-            <td>No</td>
-            <td>Billed 2021</td>
+            <td rowspan="2"><a href="mailto:peering@akamai.com">peering@akamai.com</a></td>
+            <td rowspan="2">No</td>
+            <td rowspan="2">No</td>
+            <td rowspan="2">Billed 1x100G 2021; To Be Billed 4x100G 2021</td>
+          </tr>
+          <tr class="unused"><!-- Added 2021-06-16. Expire on 2021-12-13. -->
+            <td>Ethernet6/8/1&nbsp;(Po19)<br>Ethernet6/10/1</td>
+            <td>200G</td>
+            <td>206.108.255.85</td>
+            <td>2001:504:27:0:0:51CC::2</td>
           </tr>
           <tr><!-- MAC limit grandfathering: 5 -->
             <td>Ethernet3/4/1</td>
@@ -202,7 +208,7 @@
             <td rowspan="2">No</td>
             <td rowspan="2">Billed 2021</td>
           </tr>
-          <tr><!-- This is not a LAG. -->
+          <tr>
             <td>Ethernet4/50/1 (Po18)</td>
             <td>100G</td>
             <td>206.108.255.73</td>
@@ -402,18 +408,6 @@
           </tr>
           <tr class="unused">
             <td>Ethernet3/25/1</td>
-            <td>100G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr class="unused">
-            <td>Ethernet3/26/1</td>
             <td>100G</td>
             <td>&nbsp;</td>
             <td class="as">&nbsp;</td>
@@ -1485,31 +1479,7 @@
             <td>To Be Billed 2021</td>
           </tr>
           <tr class="unused">
-            <td>Ethernet6/8/1</td>
-            <td>100G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr class="unused">
             <td>Ethernet6/9/1</td>
-            <td>100G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr class="unused">
-            <td>Ethernet6/10/1</td>
             <td>100G</td>
             <td>&nbsp;</td>
             <td class="as">&nbsp;</td>
