@@ -965,19 +965,6 @@
             <td>No</td>
             <td>Billed 2022</td>
           </tr>
-          <tr><!-- Moving to Ethernet6/17/1. -->
-            <td>Ethernet4/40&nbsp;(Po7)<br>Ethernet5/40</td>
-            <td>20G</td>
-            <td><a href="https://www.cloudflare.com" target="_blank">CloudFlare</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS13335">13335</a></td>
-            <td>206.108.255.45</td>
-            <td>2001:504:27:0:0:3417::1</td>
-            <td><a href="mailto:icm@cloudflare.com">icm@cloudflare.com</a><br>
-                <a href="mailto:peering@cloudflare.com">peering@cloudflare.com</a></td>
-            <td>Partial</td><!-- No anycast routes -->
-            <td>No</td>
-            <td>Paid 2022</td>
-          </tr>
           <tr class="unused">
             <td>Ethernet4/42</td>
             <td>10G</td>
@@ -1464,18 +1451,22 @@
             <td>Yes</td>
             <td>Billed 2022</td>
           </tr>
-          <tr class="unused"><!-- Moving from Ethernet 4/40 & Ethernet5/40. -->
+          <tr><!-- Moving to 100G. -->
             <td>Ethernet6/17/1</td>
             <td>100G</td>
-            <td><a href="https://www.cloudflare.com" target="_blank">CloudFlare</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS13335">13335</a></td>
-            <td>206.108.255.45</td>
-            <td>2001:504:27:0:0:3417::1</td>
-            <td><a href="mailto:icm@cloudflare.com">icm@cloudflare.com</a><br>
+            <td rowspan="2"><a href="https://www.cloudflare.com" target="_blank">CloudFlare</a></td>
+            <td rowspan="2" class="as"><a href="https://bgp.he.net/AS13335">13335</a></td>
+            <td rowspan="2">206.108.255.45</td>
+            <td rowspan="2">2001:504:27:0:0:3417::1</td>
+            <td rowspan="2"><a href="mailto:icm@cloudflare.com">icm@cloudflare.com</a><br>
                 <a href="mailto:peering@cloudflare.com">peering@cloudflare.com</a></td>
-            <td>Partial</td><!-- No anycast routes -->
-            <td>No</td>
-            <td>Paid 2022</td>
+            <td rowspan="2">Partial</td><!-- No anycast routes -->
+            <td rowspan="2">No</td>
+            <td rowspan="2">Paid 2022</td>
+          </tr>
+          <tr>
+            <td>Ethernet4/40&nbsp;(Po7)<br>Ethernet5/40</td>
+            <td>20G</td>
           </tr>
           <tr><!-- Moving to 100G. -->
             <td class="unused">Ethernet6/19/1</td>
