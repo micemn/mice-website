@@ -6,7 +6,8 @@
         {
             "label": "Deploy",
             "type": "shell",
-            "command": "${cwd}/deploy"
+            "command": "${cwd}/deploy",
+            "problemMatcher": []
         }
     ]
 }
