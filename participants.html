@@ -634,17 +634,6 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td>Ethernet4/11&nbsp;(Po32)<br>Ethernet4/41<br>Ethernet5/11<br>Ethernet5/41</td>
-            <td>40G</td>
-            <td><a href="https://www.hbci.com" target="_blank">HBC</a></td>
-            <td class="as"><a href="https://bgp.he.net/AS14828">14828</a></td>
-            <td>206.108.255.55</td>
-            <td>2001:504:27:0:0:39EC::1</td>
-            <td><a href="mailto:jimk@hbci.com">jimk@hbci.com</a></td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
             <td>Ethernet4/12&nbsp;(Po39)<br>Ethernet5/21</td>
             <td>20G</td>
             <td><a href="https://www.midrivers.com" target="_blank">Mid-Rivers Telephone</a></td>
@@ -1463,16 +1452,20 @@
             <td>Yes</td>
             <td>No</td>
           </tr>
-          <tr class="unused">
-            <td>Ethernet6/30/1</td>
-            <td>100G</td>
-            <td>&nbsp;</td>
-            <td class="as">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+          <tr><!-- 100G port addeed on 2023-01-17. Expire on 2023-07-16. -->
+            <td class="unused">Ethernet6/30/1</td>
+            <td class="unused">100G</td>
+            <td rowspan="2"><a href="https://www.hbci.com" target="_blank">HBC</a></td>
+            <td rowspan="2" class="as"><a href="https://bgp.he.net/AS14828">14828</a></td>
+            <td rowspan="2">206.108.255.55</td>
+            <td rowspan="2">2001:504:27:0:0:39EC::1</td>
+            <td rowspan="2"><a href="mailto:jimk@hbci.com">jimk@hbci.com</a></td>
+            <td rowspan="2">Yes</td>
+            <td rowspan="2">No</td>
+          </tr>
+          <tr>
+            <td>Ethernet4/11&nbsp;(Po32)<br>Ethernet4/41<br>Ethernet5/11<br>Ethernet5/41</td>
+            <td>40G</td>
           </tr>
           <tr class="unused">
             <td>Ethernet6/31/1</td>
