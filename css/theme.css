@@ -271,15 +271,6 @@ td.as {
 .unused {
 	color: gray;
 }
-.late {
-	background: red;
-}
-.billed {
-	background: yellow;
-}
-.unused .billed {
-	background: white;
-}
 code {
     color: #333;
 }
