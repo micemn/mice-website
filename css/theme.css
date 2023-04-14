@@ -3,6 +3,9 @@ font-family: 'Open Sans', sans-serif !important;
 background: url(../images/bg.jpg);
 background-size: 100%;
 }
+a {
+color: #01557a;
+}
 .mice {
 background: url(../images/mbg.png);
 }
