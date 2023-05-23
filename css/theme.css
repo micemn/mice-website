@@ -279,6 +279,9 @@ code {
 }
 table.participants,
 table.participants td,
-table.participants th {
+table.participants th,
+table.communities,
+table.communities td,
+table.communities th {
 	border: 1px solid gray
 }

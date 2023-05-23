@@ -48,6 +48,14 @@
     <div class="container tc">
     <h1>Technical</h1>
 <div class="cpw">
+<h2>IXP Manager</h2>
+<p>MICE uses IXP Manager. Login at: <a href="https://ixpmgr.micemn.net">https://ixpmgr.micemn.net</a></p>
+<p>The <a href="https://ixpmgr.micemn.net/lg">looking glass</a> does not require a login.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="cpw">
 <h2>Member Port Summary</h2>
 <ul>
 <li>Spanning tree shall be disabled (no BPDUs)</li>
@@ -142,21 +150,50 @@ no cdp enable
 <li>Route Server 1: 206.108.255.1 / 2001:504:27::d1af:0:1</li>
 <li>Route Server 2: 206.108.255.2 / 2001:504:27::d1af:0:2</li>
 <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.</li>
-<li>The route servers enforce a max-prefix limit of 1024 by default. Exceptions will be made for larger networks upon request.</li>
-<li>The route servers filter out default routes (IPv4 and IPv6), IPv4 prefixes shorter than /8, IPv4 prefixes longer than /24, and the following prefixes (including longer prefixes included therein): 10.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 223.0.0.0/8, 224.0.0.0/4, 240.0.0.0/4</li>
+<li>The route servers are configured using IXP Manager. <a href="https://docs.ixpmanager.org/features/route-servers/#configuration-generation-features">Various filters</a> are applied.</li>
+<li>The route servers enforce a max-prefix limit. This is copied from <a href="https://www.peeringdb.com/">PeeringDB</a>, if your AS exists in PeeringDB. Otherwise, <a href="https://docs.ixpmanager.org/usage/customers/#peering-details">the IXP Manager default is 250</a>.</li>
 </ul>
+<h3 id="irr">IRR</h3>
+<p>The route servers require participants to document their routes and downstream ASNs in IRR objects. If you are not familiar with this process, we recommend you use ARIN’s service (assuming you are in the ARIN region). They have <a href="https://www.arin.net/resources/manage/irr/userguide/">documentation available</a>.</p>
+<ol>
+<li>Start by creating an <em>as-set</em> object with your ASN and each downstream’s ASN (or their <em>as-set</em>, if they also have downstream ASNs).</li>
+<li>Create <em>route</em>/<em>route6</em> objects for each route (prefix) you will originate.</li>
+<li>Your downstream ASNs will also need to create <em>route</em>/<em>route6</em> objects (or you will have to create them on their behalf in an IRR like <a href="https://www.radb.net">RADB</a>).</li>
+<li>Reference your <em>as-set</em> in <a href="https://peeringdb.com">PeeringDB</a>. If you do not list it in PeeringDB, then you must inform MICE of your <em>as-set</em> via email to <a href="mailto:peering@micemn.net">peering@micemn.net</a>.</li>
+</ol>
 <h3 id="bfd">BFD</h3>
 <p>The route servers are configured for passive BFD, meaning they will use BFD with you, but you need to start it. That is, you must be configured for active BFD. The route servers are configured with a minimum interval of 500 ms and a multiplier of 3.</p>
-<h3 id="communities">MICE Communities</h3>
-<p>The default behavior of the MICE route servers is to announce all routes to all peers. The following communities modify the annoucements:</p>
-<pre>
-  0:peerAS     -- Do not announce the route to the specified peer.
-
-  0:53679      -- Only announce the route to specified peers (see below).
-  53679:peerAS -- Announce the route to the specified peer.
-</pre>
-<p>For example, setting 0:1234 and 0:5678 causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.</p>
-<p>To use an opt-in model, set 0:53679 plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">mice-discuss mailing list</a> to hear about new members connecting.
+<h3 id="communities">BGP Communities</h3>
+<p>The default behavior of the MICE route servers is to announce all routes to all peers. You may use <a href="https://docs.ixpmanager.org/features/route-servers/#well-known-filtering-communities">the typical communities</a> (but pick one or the other; do not mix) to modify the announcements:</p>
+<table class="communities">
+  <tr>
+    <th>Description</th>
+    <th>Community</th>
+    <th>Large Community</th>
+  </tr>
+  <tr>
+    <td>Prevent announcement of a prefix to a peer</td>
+    <td><tt>0:peer-as</tt></td>
+    <td><tt>53679:0:peer-as</tt></td>
+  </tr>
+  <tr>
+    <td>Announce a route to a certain peer</td>
+    <td><tt>53679:peer-as</tt></td>
+    <td><tt>53679:1:peer-as</tt></td>
+  </tr>
+  <tr>
+    <td>Prevent announcement of a prefix to all peers</td>
+    <td><tt>0:53679</tt></td>
+    <td><tt>53679:0:0</tt></td>
+  </tr>
+  <tr>
+    <td>Announce a route to all peers (the default)</td>
+    <td><tt>53679:53679</tt></td>
+    <td><tt>53679:1:0</tt></td>
+  </tr>
+</table>
+<p>For example, setting 0:1234 0:5678 (or 53679:0:1234 53679:0:5678) or causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.</p>
+<p>To use an opt-in model, set 0:53679 (or 53679:0:0)  plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 (or 53679:0:0 53679:1:1234 53679:1:5678) causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">MICE-DISCUSS mailing list</a> to hear about new members connecting.</p>
 </div>
 </div>
 
