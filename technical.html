@@ -1,227 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>
+      Technical - Midwest Internet Cooperative Exchange
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="images/fav.png">
-    <title>
-      Technical - Midwest Internet Cooperative Exchange
-    </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/theme.css" rel="stylesheet">
   </head>
-  <body class="mice">
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button> <a href="/"><img src="images/logo.png" alt="Midwest Internet Cooperative Exchange"></a>
+  <body class="patternbg">
+    <!--NAVBAR START -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-md">
+        <div class="container d-flex">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Midwest Internet Cooperative Exchange"></a>
+          </div>
+          <div id="mynavbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav customenav">
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="participants.html">Participants</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="contributions.html">Contributions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="resources.html">Resources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="technical.html">Technical</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="people.html">People</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-decoration-none" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="services.html">Services</a>
-            </li>
-            <li>
-              <a href="participants.html">Participants</a>
-            </li>
-            <li>
-              <a href="contributions.html">Contributions</a>
-            </li>
-            <li>
-              <a href="resources.html">Resources</a>
-            </li>
-            <li>
-              <a href="technical.html">Technical</a>
-            </li>
-            <li>
-              <a href="people.html">People</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-    <div class="container tc">
-      <h1>
-        Technical
-      </h1>
-      <div class="cpw">
-        <h2>
-          IXP Manager
-        </h2>
-        <p>
-          MICE uses IXP Manager. Login at: <a href="https://ixpmgr.micemn.net">https://ixpmgr.micemn.net</a>
-        </p>
-        <p>
-          The <a href="https://ixpmgr.micemn.net/lg">looking glass</a> does not require a login.
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          Member Port Summary
-        </h2>
-        <ul>
-          <li>Spanning tree shall be disabled (no BPDUs)
-          </li>
-          <li>Proxy ARP shall be disabled. Use "no ip proxy-arp" or similar.
-          </li>
-          <li>An MTU of 9000 is supported
-          </li>
-          <li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M
-          </li>
-          <li>A maximum of 1 incoming MAC address. Due to Zayo’s non-compliance with MICE’s MAC limiting policy, MAC filtering is in place for their remote switch; participants on the Zayo remote switch must inform MICE of their specific MAC address upon initial connection and if it changes.
-          </li>
-          <li>For recommendations on how to configure your equipment, see the excellent <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
-          </li>
-          <li>Use of the route servers is optional.
-          </li>
-          <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.
-          </li>
-          <li>BFD (<a href="https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection">Bidirectional Forwarding Detection</a>) is optional. See the <a href="#bfd">route server BFD section</a> below for more details on route server BFD. BFD on bilateral sessions is between members to negotiate.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          Route Servers
-        </h2>
-        <ul>
-          <li>Route Server 1: 206.108.255.1 / 2001:504:27::d1af:0:1
-          </li>
-          <li>Route Server 2: 206.108.255.2 / 2001:504:27::d1af:0:2
-          </li>
-          <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.
-          </li>
-          <li>The route servers are configured using IXP Manager. <a href="https://docs.ixpmanager.org/features/route-servers/#configuration-generation-features">Various filters</a> are applied.
-          </li>
-          <li>The route servers enforce a max-prefix limit. This is copied from <a href="https://www.peeringdb.com/">PeeringDB</a>, if your AS exists in PeeringDB. Otherwise, <a href="https://docs.ixpmanager.org/usage/customers/#peering-details">the IXP Manager default is 250</a>.
-          </li>
-        </ul>
-        <h3 id="irr">
-          IRR
-        </h3>
-        <p>
-          The route servers require participants to document their routes and downstream ASNs in IRR objects. If you are not familiar with this process, we recommend you use ARIN’s service (assuming you are in the ARIN region). They have <a href="https://www.arin.net/resources/manage/irr/userguide/">documentation available</a>.
-        </p>
-        <ol>
-          <li>Start by creating an <em>as-set</em> object with your ASN and each downstream’s ASN (or their <em>as-set</em>, if they also have downstream ASNs).
-          </li>
-          <li>Create <em>route</em>/<em>route6</em> objects for each route (prefix) you will originate.
-          </li>
-          <li>Your downstream ASNs will also need to create <em>route</em>/<em>route6</em> objects (or you will have to create them on their behalf in an IRR like <a href="https://www.radb.net">RADB</a>).
-          </li>
-          <li>Reference your <em>as-set</em> in <a href="https://peeringdb.com">PeeringDB</a>. If you do not list it in PeeringDB, then you must inform MICE of your <em>as-set</em> via email to <a href="mailto:peering@micemn.net">peering@micemn.net</a>.
-          </li>
-        </ol>
-        <h3 id="bfd">
-          BFD
-        </h3>
-        <p>
-          The route servers are configured for passive BFD, meaning they will use BFD with you, but you need to start it. That is, you must be configured for active BFD. The route servers are configured with a minimum interval of 500 ms and a multiplier of 3.
-        </p>
-        <h3 id="communities">
-          BGP Communities
-        </h3>
-        <p>
-          The default behavior of the MICE route servers is to announce all routes to all peers. You may use <a href="https://docs.ixpmanager.org/features/route-servers/#well-known-filtering-communities">the typical communities</a> (but pick one or the other; do not mix) to modify the announcements:
-        </p>
-        <table class="communities">
-          <tr>
-            <th>
-              Description
-            </th>
-            <th>
-              Community
-            </th>
-            <th>
-              Large Community
-            </th>
-          </tr>
-          <tr>
-            <td>
-              Prevent announcement of a prefix to a peer
-            </td>
-            <td>
-              <tt>0:peer-as</tt>
-            </td>
-            <td>
-              <tt>53679:0:peer-as</tt>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Announce a route to a certain peer
-            </td>
-            <td>
-              <tt>53679:peer-as</tt>
-            </td>
-            <td>
-              <tt>53679:1:peer-as</tt>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Prevent announcement of a prefix to all peers
-            </td>
-            <td>
-              <tt>0:53679</tt>
-            </td>
-            <td>
-              <tt>53679:0:0</tt>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Announce a route to all peers (the default)
-            </td>
-            <td>
-              <tt>53679:53679</tt>
-            </td>
-            <td>
-              <tt>53679:1:0</tt>
-            </td>
-          </tr>
-        </table>
-        <p>
-          For example, setting 0:1234 0:5678 (or 53679:0:1234 53679:0:5678) or causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.
-        </p>
-        <p>
-          To use an opt-in model, set 0:53679 (or 53679:0:0) plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 (or 53679:0:0 53679:1:1234 53679:1:5678) causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">MICE-DISCUSS mailing list</a> to hear about new members connecting.
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          Equipment
-        </h2>
-        <p>
-          The <a href="files/MICE%20Equipment.pdf">MICE Equipment</a> (<a href="files/MICE%20Equipment.odg">.odg</a>) diagram shows how the various switches are connected.
-        </p>
-        <p>
-          Here are some pictures of the rack, from 2017-05-10: <a href="images/newcab1.jpg">full cabinet</a>, <a href="images/newcab2.jpg">switch</a>, <a href="images/newcab3.jpg">top of cabinet.</a>
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          MICE Arista Switch Configuration
-        </h2>
-        <p>
-          This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
-        </p>
-        <pre>
-errdisable recovery cause bpduguard
+      </nav>
+    </header><!--NAVBAR END -->
+    <div class="container-fluid topsection">
+      <div class="container">
+        <div class="page-title">
+          <h1>
+            Technical
+          </h1>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  IXP Manager
+                </h2>
+                <p>
+                  MICE uses IXP Manager. Login at: <a href="https://ixpmgr.micemn.net">https://ixpmgr.micemn.net</a>
+                </p>
+                <p>
+                  The <a href="https://ixpmgr.micemn.net/lg">looking glass</a> does not require a login.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  Member Port Summary
+                </h2>
+                <ul class="ps-5">
+                  <li>Spanning tree shall be disabled (no BPDUs)
+                  </li>
+                  <li>Proxy ARP shall be disabled. Use "no ip proxy-arp" or similar.
+                  </li>
+                  <li>An MTU of 9000 is supported
+                  </li>
+                  <li>Multicasts, Broadcasts, and Unknown Unicasts are limited to 100M
+                  </li>
+                  <li>A maximum of 1 incoming MAC address. Due to Zayo’s non-compliance with MICE’s MAC limiting policy, MAC filtering is in place for their remote switch; participants on the Zayo remote switch must inform MICE of their specific MAC address upon initial connection and if it changes.
+                  </li>
+                  <li>For recommendations on how to configure your equipment, see the excellent <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
+                  </li>
+                  <li>Use of the route servers is optional.
+                  </li>
+                  <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.
+                  </li>
+                  <li>BFD (<a href="https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection">Bidirectional Forwarding Detection</a>) is optional. See the <a href="#bfd">route server BFD section</a> below for more details on route server BFD. BFD on bilateral sessions is between members to negotiate.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  Route Servers
+                </h2>
+                <ul class="ps-5">
+                  <li>Route Server 1: 206.108.255.1 / 2001:504:27::d1af:0:1
+                  </li>
+                  <li>Route Server 2: 206.108.255.2 / 2001:504:27::d1af:0:2
+                  </li>
+                  <li>Note that your BGP sessions to the route servers likely need <code>no bgp enforce-first-as</code> or similar. The route servers do not add the MICE AS to the AS path.
+                  </li>
+                  <li>The route servers are configured using IXP Manager. <a href="https://docs.ixpmanager.org/features/route-servers/#configuration-generation-features">Various filters</a> are applied.
+                  </li>
+                  <li>The route servers enforce a max-prefix limit. This is copied from <a href="https://www.peeringdb.com/">PeeringDB</a>, if your AS exists in PeeringDB. Otherwise, <a href="https://docs.ixpmanager.org/usage/customers/#peering-details">the IXP Manager default is 250</a>.
+                  </li>
+                </ul>
+                <h3 class="fs-4 mt-3">
+                  IRR
+                </h3>
+                <p>
+                  The route servers require participants to document their routes and downstream ASNs in IRR objects. If you are not familiar with this process, we recommend you use ARIN’s service (assuming you are in the ARIN region). They have <a href="https://www.arin.net/resources/manage/irr/userguide/">documentation available</a>.
+                </p>
+                <ol class="ps-5 mb-3">
+                  <li>Start by creating an <em>as-set</em> object with your ASN and each downstream’s ASN (or their <em>as-set</em>, if they also have downstream ASNs).
+                  </li>
+                  <li>Create <em>route</em>/<em>route6</em> objects for each route (prefix) you will originate.
+                  </li>
+                  <li>Your downstream ASNs will also need to create <em>route</em>/<em>route6</em> objects (or you will have to create them on their behalf in an IRR like <a href="https://www.radb.net">RADB</a>).
+                  </li>
+                  <li>Reference your <em>as-set</em> in <a href="https://peeringdb.com">PeeringDB</a>. If you do not list it in PeeringDB, then you must inform MICE of your <em>as-set</em> via email to <a href="mailto:peering@micemn.net">peering@micemn.net</a>.
+                  </li>
+                </ol>
+                <h3 class="fs-4">
+                  BFD
+                </h3>
+                <p class="mb-3">
+                  The route servers are configured for passive BFD, meaning they will use BFD with you, but you need to start it. That is, you must be configured for active BFD. The route servers are configured with a minimum interval of 500 ms and a multiplier of 3.
+                </p>
+                <h3 class="fs-4">
+                  BGP Communities
+                </h3>
+                <p>
+                  The default behavior of the MICE route servers is to announce all routes to all peers. You may use the typical communities (but pick one or the other; do not mix) to modify the announcements:
+                </p>
+                <div class="table-responsive mb-2">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>
+                          Description
+                        </th>
+                        <th>
+                          Community
+                        </th>
+                        <th>
+                          Large Community
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          Prevent announcement of a prefix to a peer
+                        </td>
+                        <td>
+                          <tt>0:peer-as</tt>
+                        </td>
+                        <td>
+                          <tt>53679:0:peer-as</tt>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Announce a route to a certain peer
+                        </td>
+                        <td>
+                          <tt>53679:peer-as</tt>
+                        </td>
+                        <td>
+                          <tt>53679:1:peer-as</tt>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Prevent announcement of a prefix to all peers
+                        </td>
+                        <td>
+                          <tt>0:53679</tt>
+                        </td>
+                        <td>
+                          <tt>53679:0:0</tt>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Announce a route to all peers (the default)
+                        </td>
+                        <td>
+                          <tt>53679:53679</tt>
+                        </td>
+                        <td>
+                          <tt>53679:1:0</tt>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  For example, setting 0:1234 0:5678 (or 53679:0:1234 53679:0:5678) or causes the route server to announce the route to everyone except AS1234 and AS5678. This is an opt-out model.
+                </p>
+                <p>
+                  To use an opt-in model, set 0:53679 (or 53679:0:0) plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 (or 53679:0:0 53679:1:1234 53679:1:5678) causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">MICE-DISCUSS mailing list</a> to hear about new members connecting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  Equipment
+                </h2>
+                <p>
+                  The <a href="files/MICE%20Equipment.pdf">MICE Equipment</a> (<a href="files/MICE%20Equipment.odg">.odg</a>) diagram shows how the various switches are connected.
+                </p>
+                <p>
+                  Here are some pictures of the rack, from 2017-05-10: <a href="images/newcab1.jpg">full cabinet</a>, <a href="images/newcab2.jpg">switch</a>, <a href="images/newcab3.jpg">top of cabinet.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  MICE Arista Switch Configuration
+                </h2>
+                <p>
+                  This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
+                </p>
+                <pre class="rounded p-2">errdisable recovery cause bpduguard
 errdisable recovery cause link-flap
 errdisable recovery cause portsec
 no lldp run
@@ -238,18 +265,21 @@ interface EthernetX/X
   storm-control multicast level 1
   spanning-tree portfast
 </pre>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          MICE Juniper Switch Configuration
-        </h2>
-        <p>
-          This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
-        </p>
-        <pre>
-set interface X/X/X mtu 9216
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  MICE Juniper Switch Configuration
+                </h2>
+                <p>
+                  This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
+                </p>
+                <pre class="rounded p-2">set interface X/X/X mtu 9216
 set protocols rstp interface X/X/X edge
 set ethernet-switching-options bpdu-block interface X/X/X
 set ethernet-switching-options secure-access-port interface X/X/X mac-limit 1
@@ -257,18 +287,21 @@ set ethernet-switching-options storm-control interface X/X/X bandwidth 100000
 set ethernet-switching-options bpdu-block disable-timeout 60
 set ethernet-switching-options storm-control interface all
 </pre>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw">
-        <h2>
-          MICE Cisco Switch Configuration
-        </h2>
-        <p>
-          This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
-        </p>
-        <pre>
-system mtu jumbo 9198
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="common-section-div">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  MICE Cisco Switch Configuration
+                </h2>
+                <p>
+                  This shows how the MICE side is configured and is for reference only. While <em>some</em> of this may be applicable to the member side, it is not a set of instructions on how to configure your device. For that, see the <a href="https://www.ams-ix.net/ams/documentation/config-guide">AMS-IX Config Guide</a> or the "Any other tips on configuring my router?" question in the <a href="https://www.seattleix.net/faq">SeattleIX FAQ</a>.
+                </p>
+                <pre class="rounded p-2">system mtu jumbo 9198
 mac address-table aging-time 14400
 errdisable detect cause link-flap
 errdisable recovery cause link-flap
@@ -283,90 +316,101 @@ storm-control broadcast level 20.00
 spanning-tree bpdufilter enable
 no cdp enable
 </pre>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cpw mb">
-        <h2 id="remotes">
-          Remote Switches
-        </h2>
-        <p>
-          If you are interested in operating a MICE remote switch, please contact <a href="mailto:peering@micemn.net">peering@micemn.net</a>.
-        </p>
-        <p>
-          The process for connecting a new remote switch is as follows:
-        </p>
-        <ol>
-          <li>The remote switch operator will provide a proposal to the board addressing both technical and business details. Switches dedicated to MICE are quasi-required. Proposals should address expected participation. For example, does the operator have firm commitments from e.g. 5 participants?
-          </li>
-          <li>The board will publish the proposal to the discussion list.
-          </li>
-          <li>After a reasonable comment period, the board will approve or deny the proposal.
-          </li>
-        </ol>
-        <p>
-          Remote switch operators’ obligations include (but are not necessarily limited to):
-        </p>
-        <ul>
-          <li>Operators must obtain prior approval from the board for modifications.
-          </li>
-          <li>Operators are responsible for the costs of operating their remote switch and the links to the core switch. They must monitor their traffic levels and promptly add capacity to keep the links running congestion-free.
-          </li>
-          <li>Operators must enforce MICE’s technical port rules on their remote switches.
-          </li>
-          <li>Operators must coordinate participant connections and disconnections with MICE. MICE allocates exchange IP addresses and documents participant connections.
-          </li>
-          <li>Operators must inform their participants that the participants are not connecting directly to MICE. The remote switch operator cannot claim to be MICE.
-          </li>
-          <li>Operators must inform their participants that the participants are also subject to MICE rules, procedures, and costs.
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-3">
-            <div class="news">
-              <h1>
-                Events
-              </h1><a href="https://www.eventcreate.com/e/mwps2023">Midwest Peering Summit</a><br>
-              July 17-18, 2023<br>
-              <a href="https://www.stoneycreekhotels.com">Stoney Creek Hotel, Des Moines</a><br>
+              </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="linksbox">
-              <h1>
-                Links
-              </h1>
-              <ul class="linkbox">
-                <li>
-                  <a href="http://micelg.usinternet.com/cacti/graph_view.php?action=tree&amp;tree_id=1&amp;leaf_id=19&amp;select_first=true">MICE Traffic Stats</a>
-                </li>
-                <li>
-                  <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">Mailing List</a>
-                </li>
-                <li>
-                  <a href="https://www.peeringdb.com/ix/446">PeeringDB</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="contactbox">
-              <h1>
-                Contact Us
-              </h1><a href="mailto:peering@micemn.net">peering@micemn.net</a><br>
-              <a href="https://www.linkedin.com/groups/3000346/">LinkedIn Group</a><br>
-              <a href="contact.html">Questions?</a>
+        </div>
+        <div class="common-section-div mb">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 col-12">
+              <div class="sbox">
+                <h2 class="fs-4">
+                  Remote Switches
+                </h2>
+                <p>
+                  If you are interested in operating a MICE remote switch, please contact <a href="mailto:peering@micemn.net">peering@micemn.net</a>.
+                </p>
+                <p>
+                  The process for connecting a new remote switch is as follows:
+                </p>
+                <ol class="ps-5">
+                  <li>The remote switch operator will provide a proposal to the board addressing both technical and business details. Switches dedicated to MICE are quasi-required. Proposals should address expected participation. For example, does the operator have firm commitments from e.g. 5 participants?
+                  </li>
+                  <li>The board will publish the proposal to the discussion list.
+                  </li>
+                  <li>After a reasonable comment period, the board will approve or deny the proposal.
+                  </li>
+                </ol>
+                <p>
+                  Remote switch operators’ obligations include (but are not necessarily limited to):
+                </p>
+                <ul class="ps-5">
+                  <li>Operators must obtain prior approval from the board for modifications.
+                  </li>
+                  <li>Operators are responsible for the costs of operating their remote switch and the links to the core switch. They must monitor their traffic levels and promptly add capacity to keep the links running congestion-free.
+                  </li>
+                  <li>Operators must enforce MICE’s technical port rules on their remote switches.
+                  </li>
+                  <li>Operators must coordinate participant connections and disconnections with MICE. MICE allocates exchange IP addresses and documents participant connections.
+                  </li>
+                  <li>Operators must inform their participants that the participants are not connecting directly to MICE. The remote switch operator cannot claim to be MICE.
+                  </li>
+                  <li>Operators must inform their participants that the participants are also subject to MICE rules, procedures, and costs.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <script src="js/jquery-1.12.4.min.js"></script> 
-    <script src="js/bootstrap.min.js"></script>
+    </div><!--FOOTER SECTION START -->
+    <footer class="fixed-bottom">
+      <div class="container">
+        <div class="footer-common">
+          <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 col-12 footer-col-1"></div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 col-12 footer-col-2">
+              <div class="footer-events">
+                <h1 class="m-0 fw-bold">
+                  Events
+                </h1><a class="text-white" href="https://www.eventcreate.com/e/mwps2023">Midwest Peering Summit</a><br>
+                July 17-18, 2023<br>
+                <a class="text-white" href="https://www.stoneycreekhotels.com">Stoney Creek Hotel, Des Moines</a><br>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 col-12 footer-col-3">
+              <div class="footer-links">
+                <h1 class="m-0 fw-bold">
+                  Links
+                </h1>
+                <ul class="linkbox">
+                  <li>
+                    <a class="text-white" href="http://micelg.usinternet.com/cacti/graph_view.php?action=tree&amp;tree_id=1&amp;leaf_id=19&amp;select_first=true">MICE Traffic Stats</a>
+                  </li>
+                  <li>
+                    <a class="text-white" href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">Mailing List</a>
+                  </li>
+                  <li>
+                    <a class="text-white" href="https://www.peeringdb.com/ix/446">PeeringDB</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 col-12 footer-col-4">
+              <div class="footer-contact">
+                <h1 class="m-0 fw-bold">
+                  Contact Us
+                </h1><a class="text-white" href="mailto:peering@micemn.net">peering@micemn.net</a><br>
+                <a class="text-white" href="https://www.linkedin.com/groups/3000346/">LinkedIn Group</a><br>
+                <a class="text-white" href="#">Questions?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer><!--FOOTER SECTION END -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
