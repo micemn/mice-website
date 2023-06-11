@@ -29,7 +29,8 @@ body {
     background: url("../images/mbg.png");
 }
 
-.unused {
+.table>:not(caption)>tr.unused td,
+.table>:not(caption)>tr td.unused {
     color: gray;
 }
 
