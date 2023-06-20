@@ -31,6 +31,18 @@ body {
     color: gray;
 }
 
+table.participants td.participants-contacts,
+table.participants td.participants-policy,
+table.participants td.participants-switch,
+table.participants td.participants-ports {
+    font-size: 12px;
+}
+
+table.participants .participants-route-server-links {
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -344,6 +356,19 @@ table.participants tr {
         font-size: 30px;
         color: #003851;
     }
+
+    table.participants {
+        font-size: 12px;
+    }
+
+    table.participants .participants-policy,
+    table.participants .participants-switch,
+    table.participants .participants-ports,
+    table.participants .participants-speed,
+    table.participants .participants-route-servers-v,
+    table.participants .participants-address {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -366,6 +391,16 @@ table.participants tr {
         font-size: 38px;
         line-height: 45px;
     }
+
+    table.participants {
+        font-size: 12px;
+    }
+
+    table.participants .participants-policy,
+    table.participants .participants-switch,
+    table.participants .participants-ports {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
@@ -379,6 +414,10 @@ table.participants tr {
 
     .navbar-expand-md .navbar-collapse {
         justify-content: end;
+    }
+
+    table.participants .participants-address-ipv6 {
+        font-size: 12px;
     }
 }
 
@@ -398,6 +437,10 @@ table.participants tr {
     .middle-box h1 {
         font-size: 40px;
         line-height: 50px;
+    }
+
+    table.participants .participants-address-ipv6 {
+        font-size: 12px;
     }
 }
 
