@@ -217,6 +217,142 @@
                 <p>
                   To use an opt-in model, set 0:53679 (or 53679:0:0) plus the communities for each AS you want to receive the route. For example, setting 0:53679 53679:1234 53679:5678 (or 53679:0:0 53679:1:1234 53679:1:5678) causes the route servers to announce the route to only AS1234 and AS5678. If you choose an opt-in model, you may want to monitor the <a href="https://lists.iphouse.net/cgi-bin/wa?A0=MICE-DISCUSS">MICE-DISCUSS mailing list</a> to hear about new members connecting.
                 </p>
+                <h3 class="fs-4">
+                  IXP Manager Updates
+                </h3>
+                <p>
+                  IXP Manager and our custom scripts are run on various schedules:
+                </p>
+                <div class="table-responsive mb-2">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>
+                          Description
+                        </th>
+                        <th>
+                          Server
+                        </th>
+                        <th>
+                          Schedule <small>(US/Central)</small>
+                        </th>
+                        <th>
+                          Notes
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          Sync IRR from PeeringDB to IXP Manager
+                        </td>
+                        <td>
+                          IXP Manager
+                        </td>
+                        <td>
+                          every 30-90 minutes
+                        </td>
+                        <td>
+                          If the AS-SET referenced by PeeringDB is changed, the ASN  and prefix caches will be immediately updated for that ASN. However, the changes will still only take effect on the route servers when the Update BIRD Config job runs.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Update IRR Prefixes Cache
+                        </td>
+                        <td rowspan="2">
+                          IXP Manager
+                        </td>
+                        <td>
+                          00:07, 06:07, 12:07, 18:07
+                        </td>
+                        <td rowspan="2">
+                          Changes to IRR only take effect on the route servers when the Update BIRD Config job runs.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Update IRR ASNs Cache
+                        </td>
+                        <td>
+                          00:37, 06:37, 12:37, 18:37
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                          Update BIRD Config
+                        </td>
+                        <td>
+                          Route Server 1
+                        </td>
+                        <td>
+                          8-12 minutes after the hour
+                        </td>
+                        <td rowspan="2">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Route Server 2
+                        </td>
+                        <td>
+                          38-42 minutes after the hour
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">
+                          Revalidate <em>Valid</em> ROAs
+                        </td>
+                        <td>
+                          Route Server 1
+                        </td>
+                        <td>
+                          01:23, 13:23
+                        </td>
+                        <td rowspan="2">
+                          <a href="https://docs.ixpmanager.org/features/rpki/#revalidation">“Bird v2.0.4 does not support revalidation of prefixes following ROA updates (i.e. a prefix that was accepted as ROA valid that subsequently becomes ROA unknown / invalid will remain learnt as ROA valid).”</a>
+                      </tr>
+                      <tr>
+                        <td>
+                          Route Server 2
+                        </td>
+                        <td>
+                          07:53, 19:53
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Update MRTG Config
+                        </td>
+                        <td>
+                          IXP Manager
+                        </td>
+                        <td>
+                          every 30-90 minutes
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Update MANRS Participation Badges
+                        </td>
+                        <td>
+                          IXP Manager
+                        </td>
+                        <td>
+                          daily
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  For more built-in IXP Manager tasks, see <a href="https://docs.ixpmanager.org/features/cronjobs/">IXP Manager Documentation - Cron Jobs - Task Scheduling</a>.
+                </p>
               </div>
             </div>
           </div>
